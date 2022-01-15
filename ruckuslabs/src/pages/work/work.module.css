@@ -1,0 +1,56 @@
+.hero-wrapper:before,
+.hero-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(39, 39, 39, 0) 0%,
+    #272727 100%
+  );
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.hero-wrapper:after {
+  transform: rotate(0deg);
+  top: initial;
+  bottom: 0;
+  height: 800px;
+}
+
+.hero-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-top: -180px;
+  padding-top: 550px;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  position: relative;
+  display: flex;
+}
+
+.hero-wrapper p {
+  color: white;
+  font-weight: 400;
+}
+
+/* .hero {
+  height: 50vh;
+  overflow: hidden;
+} */
+
+innerwrapper {
+  display: block;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 50vh;
+  z-index: 3;
+  position: relative;
+  margin-top: auto;
+}

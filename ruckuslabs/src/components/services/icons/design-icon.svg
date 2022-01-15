@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>design-icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="design-icon" transform="translate(1.000000, 1.000000)" stroke="#FFFFFF" stroke-width="2">
+            <polygon id="Path" points="10 17 17 10 20 13 13 20"></polygon>
+            <polygon id="Path" points="16 11 14.5 3.5 0 0 3.5 14.5 11 16"></polygon>
+            <line x1="0" y1="0" x2="7.586" y2="7.586" id="Path"></line>
+            <circle id="Oval" cx="9" cy="9" r="2"></circle>
+        </g>
+    </g>
+</svg>

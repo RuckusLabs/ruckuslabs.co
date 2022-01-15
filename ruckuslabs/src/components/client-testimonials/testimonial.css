@@ -1,0 +1,34 @@
+.testimonial {
+  margin-top: calc(var(--global-spacing) * 2);
+  border: 1px solid rgba(var(--gray), 0.5);
+  border-radius: var(--global-border-radius);
+  padding: calc(var(--global-spacing) * 2);
+  transition: border var(--global-animation-timing);
+}
+
+.testimonial:hover {
+  border: 1px solid rgba(var(--gray), 1);
+}
+
+.testimonial img {
+  border-radius: 100%;
+  width: 75px;
+}
+
+.testimonial p:first-of-type {
+  color: rgb(var(--white));
+}
+
+.testimonial p:first-of-type:before,
+.testimonial p:first-of-type:after {
+  content: '"';
+}
+
+.testimonial .author {
+  font-size: 14px;
+}
+
+.testimonial .author:before {
+  content: "–";
+  margin-right: 3px;
+}

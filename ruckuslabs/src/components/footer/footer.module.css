@@ -1,0 +1,20 @@
+.copyright {
+  margin: 0 !important;
+  font-size: 12px;
+}
+
+.copyright img {
+  position: relative;
+  width: 60px;
+  top: 3px;
+}
+
+footer {
+  border-top: 1px solid rgba(var(--gray), 0.5);
+  padding-top: calc(var(--global-spacing) * 2);
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: calc(var(--global-spacing) * 2);
+  margin-bottom: calc(var(--global-spacing) * 2);
+}

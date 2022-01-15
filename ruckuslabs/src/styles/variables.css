@@ -1,0 +1,9 @@
+:root {
+  --darkGray: 39, 39, 39;
+  --gray: 119, 119, 119;
+  --red: 238, 63, 58;
+  --white: 255, 255, 255;
+  --global-animation-timing: 0.222s;
+  --global-border-radius: 8px;
+  --global-spacing: 25px;
+}

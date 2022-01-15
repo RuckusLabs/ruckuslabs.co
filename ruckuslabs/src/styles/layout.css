@@ -1,0 +1,22 @@
+section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section + section {
+  margin-top: calc(var(--global-spacing) * 4);
+}
+
+section.bleed {
+  width: 100%;
+  max-width: 100%;
+}
+
+section.bleed h2,
+section.bleed p {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-block-end: 0.83em;
+}

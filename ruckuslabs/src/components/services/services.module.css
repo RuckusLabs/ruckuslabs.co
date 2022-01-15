@@ -1,0 +1,35 @@
+article {
+  display: block;
+  background-color: rgba(var(--gray), 0.2);
+  border-radius: var(--global-border-radius);
+  padding: var(--global-spacing);
+}
+
+article img {
+  width: 25px;
+  height: 25px;
+  padding: calc(var(--global-spacing) / 2);
+  background-color: rgb(var(--red));
+  border-radius: var(--global-border-radius);
+}
+
+article h3 {
+  font-size: 24px;
+}
+
+article p {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--global-spacing);
+}
+
+@media screen and (max-width: 600px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}

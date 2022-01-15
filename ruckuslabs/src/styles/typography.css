@@ -1,0 +1,36 @@
+body {
+  /* /font-family: "Inter", Helvetica, sans-serif; */
+  font-family: "Inter";
+}
+a {
+  color: white;
+  transition: opacity 0.2s;
+  opacity: 0.7;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a.external:after {
+  content: " ↗";
+  font-family: monospace;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 16px;
+  color: rgb(var(--gray));
+}

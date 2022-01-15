@@ -1,0 +1,26 @@
+.header {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header a {
+  opacity: 1;
+}
+
+.header img {
+  width: 125px;
+}
+
+.header {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.burger {
+  max-width: 25px;
+  cursor: pointer;
+}
