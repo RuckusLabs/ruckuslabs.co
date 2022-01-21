@@ -1,22 +1,14 @@
-h1 {
-  margin-top: 100px;
-  font-size: 60px;
-}
-
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 37px;
-  }
-}
-
-p {
-  font-size: 24px;
-}
-
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   width: 95%;
   max-width: 900px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 31px;
+    margin: 50px 0;
+  }
 }
