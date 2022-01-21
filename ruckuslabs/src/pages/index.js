@@ -19,19 +19,6 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   const workItems = [
     {
       "title": "Lawline Web Interface",
@@ -72,7 +59,6 @@ const BlogIndex = ({ data, location }) => {
       <section className="bleed">
         <nav className={indexStyles.sectionHeader}>
           <h2>Featured Work</h2>
-          <a href="#">Browse More Work</a>
         </nav>
         <WorkCarousel items={workItems} />
       </section>
@@ -80,9 +66,7 @@ const BlogIndex = ({ data, location }) => {
       <section>
         <h2>Featured Clients</h2>
         <ClientGrid />
-        <ClientTestimonials />
       </section>
-
     </Layout>
   )
 }

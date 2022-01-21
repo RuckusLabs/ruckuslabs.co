@@ -7,12 +7,16 @@
   width: auto !important;
 }
 
+.swiper-slide a {
+  white-space: pre-wrap;
+}
+
 .swiper-slide a:after {
   content: none;
 }
 
 .swiper-slide {
-  width: 100% !important;
+  width: 90% !important;
   max-width: 900px;
   opacity: 0.8;
   transition: opacity var(--global-animation-timing);
@@ -20,8 +24,12 @@
 
 @media only screen and (max-width: 600px) {
   .swiper-slide {
-    width: 90% !important;
-    margin-left: 3.5%;
+    width: 85% !important;
+    /* margin-left: -3.5% !important; */
+    opacity: 1;
+  }
+  .swiper-wrapper {
+    margin-left: -5%;
   }
 }
 
@@ -51,6 +59,7 @@
 
 .swiper-slide:hover .tag {
   opacity: 1;
+  white-space: pre-wrap;
 }
 
 figure {
@@ -81,6 +90,7 @@ figure img {
   border-radius: 50px;
   padding: 5px 10px;
   font-weight: 400;
+  white-space: pre-wrap;
 }
 
 .tag + .tag {
@@ -90,7 +100,15 @@ figure img {
 @media screen and (max-width: 600px) {
   figure {
     height: 250px;
+    margin-bottom: 10px;
     max-width: 100%;
     background-size: cover;
+  }
+
+  .tag {
+    margin: 5px;
+  }
+  .tag + .tag {
+    margin-left: 2px;
   }
 }

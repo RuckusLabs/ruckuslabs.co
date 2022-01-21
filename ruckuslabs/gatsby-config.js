@@ -3,13 +3,14 @@ module.exports = {
     title: `Ruckus Labs`,
     author: {
       name: `Damian`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `Owner of Ruckus Labs.`,
     },
     description: `Ruckus Labs is a design and development studio dedicated to the pursuit of empathetic design.`,
     siteUrl: `https://ruckuslabs.co`,
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -110,15 +111,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Ruckus Labs`,
+        short_name: `Ruckus`,
         start_url: `/`,
         background_color: `#EE3F3A`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

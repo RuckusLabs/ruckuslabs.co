@@ -25,7 +25,7 @@ export default function WorkCarousel(props) {
               {item.tags && item.tags.map((tag) => (
                 <h4 className="tag">{tag}</h4>
               ))}
-              <h3>{item.title}</h3>
+              <h3 className="external-link">{item.title}</h3>
               <p>{item.description}</p>
             </a>
             :

@@ -1,16 +1,22 @@
 import * as React from "react"
 
-import * as showcaseGridStyles from "./showcase-grid.module.css";
+import "./showcase-grid.css";
+import "../fancybox/fancybox.css";
+import Fancybox from '../fancybox/fancybox';
 
 export default function ShowcaseGrid(props) {
 
-  const gridStyle = [`showcaseGridStyles.grid--${props.items.length}`];
-
   return (
-    <div className={gridStyle}>
+    <div className={`showcase-grid showcase-grid--${props.items.length}`}>
       {props.items.map((item) => (
-        <div className={showcaseGridStyles.gridItem}>
-          <img src={item.src} />
+        <div className={`showcase-grid-item`}>
+          <Fancybox>
+            <img
+              data-fancybox={props.gallery}
+              data-src={item.src}
+              src={item.src}
+            />
+          </Fancybox>
           <h4>{item.title}</h4>
           <p>{item.description}</p>
         </div>

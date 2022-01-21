@@ -14,27 +14,27 @@ export default function Services() {
       <article>
         <img src={DesignIcon} />
         <h3>User Interface Design</h3>
-        <p>Creating interactive programs that enhance a customer's experience with a brand and facilitate an enjoyable experience on the business's website.</p>
+        <p>Research and designing interfaces that enhance a user's experience with a brand or interaction.</p>
       </article>
       <article>
         <img src={BrandingIcon} />
         <h3>Branding & Logo Design</h3>
-        <p>Develops a company's public image and messaging</p>
+        <p>Crafting modern, unique branding identities that align with your users expectations.</p>
       </article>
       <article>
         <img src={DevelopmentIcon} />
-        <h3>Development (Web, Product)</h3>
-        <p>Responsible for designing, coding and modifying websites, from layout to function and according to a client's specifications.</p>
+        <h3>Development & Coding</h3>
+        <p>Designing and coding thoughtful, flexible, and secure interfaces usable across myriad devices.</p>
       </article>
       <article>
         <img src={DesignSystemsIcon} />
         <h3>Design Systems</h3>
-        <p>The single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.</p>
+        <p>Imagining collections of elements that allow teams to cohesively align during the design process.</p>
       </article>
       <article>
         <img src={PrintIcon} />
         <h3>Print Design</h3>
-        <p>Creation of visual designs for printing such as brochures, labels, business cards, and a range of other marketing materials. </p>
+        <p>Crafting beautiful print products like brochures, business cards, and other marketing materials.</p>
       </article>
     </div>
   )

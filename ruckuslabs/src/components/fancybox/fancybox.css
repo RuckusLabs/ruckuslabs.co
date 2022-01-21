@@ -1,0 +1,8 @@
+.fancybox__thumbs,
+.fancybox__button--zoom,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs,
+.fancybox__toolbar__items--left {
+  display: none !important;
+}

@@ -12,7 +12,7 @@ const NotFoundPage = ({ data, location }) => {
       <section>
         <Seo title="404: Not Found" />
         <h1>404</h1>
-        <p>The page you're looking for doesn't exist. It may have been moved or deleted. If you think you're seeing this message in error, please message <a className="external" href="mailto:damian@makki.pro">damian@makki.pro</a>.</p>
+        <p>The page you're looking for doesn't exist. It may have been moved or deleted. If you think you're seeing this message in error, please message <a className="external" href="mailto:hi@ruckuslabs.co">hi@ruckuslabs.co</a>.</p>
       </section>
     </Layout>
 

@@ -1,7 +1,14 @@
 import * as React from "react"
 import Layout from "../../components/layout";
+import Seo from "../../components/seo";
 
 import WorkCarousel from "../../components/work-carousel/work-carousel";
+
+import LawlineImg from "../../images/frontpage/lawline-web-hero.jpg";
+import ChicoryImg from "../../images/frontpage/chicory-brand-hero.jpg";
+import LawlineAppImg from "../../images/frontpage/lawline-app-hero.jpg";
+import SAHero from "../../images/work/sourced-adventures/sa-hero.jpg";
+import TransacctsHero from "../../images/work/transaccts/transaccts-hero.jpg";
 
 import nesoLogo from "../../images/logos/neso-hero.jpg";
 import chicoryLogo from "../../images/logos/chicory-logo-hero.jpg";
@@ -17,37 +24,40 @@ import veryCoolLogo from "../../images/logos/very-cool-hero.jpg";
 export default function Work() {
 
   const userInterfaceItems = [
-    {
-      "title": "Aya Healthcare",
-      "description": "The #1 rated travel nursing agency.",
-      "hero": `https://via.placeholder.com/200x200`,
-    },
+    // {
+    //   "title": "Aya Healthcare",
+    //   "description": "The #1 rated travel nursing agency.",
+    //   "hero": `https://via.placeholder.com/200x200`,
+    // },
     {
       "title": "Lawline Web Interface",
       "link": "/work/lawline",
       "description": "Building the #1 CLE platform used by thousands of attorneys throughout the United States.",
-      "hero": `https://via.placeholder.com/200x200`,
+      "hero": `${LawlineImg}`,
     },
     {
       "title": "Lawline iOS and Android Apps",
+      "link": "/work/lawline-app",
       "description": "Translating the Lawline experience to native mobile applications.",
-      "hero": `https://via.placeholder.com/200x200`,
+      "hero": `${LawlineAppImg}`,
     },
     {
       "title": "Sourced Adventures",
+      "link": "/work/sourced-adventures",
       "description": "Escape the city.",
-      "hero": `https://via.placeholder.com/200x200`,
+      "hero": `${SAHero}`,
     },
     {
-      "title": "Transaccts iOS and Android Apps",
-      "description": "Translating the Lawline experience to native mobile applications.",
-      "hero": `https://via.placeholder.com/200x200`,
+      "title": "Transaccts PWA",
+      "link": "/work/transaccts",
+      "description": "Modernizing tax and accounting for long-haul truck drivers.",
+      "hero": `${TransacctsHero}`,
     },
   ]
 
   const brandingItems = [
     {
-      "title": "neso ↗",
+      "title": "neso",
       "link": "https://neso.com",
       "description": "Outdoor gear born in Encinitas, California.",
       "hero": `${nesoLogo}`,
@@ -64,7 +74,7 @@ export default function Work() {
       "hero": `${oldLandingLogo}`,
     },
     {
-      "title": "AZ Outside ↗",
+      "title": "AZ Outside",
       "link": "https://www.instagram.com/azoutside/",
       "description": "Showcasing the best of Arizona on Instagram.",
       "hero": `${azOutsideLogo}`,
@@ -76,7 +86,7 @@ export default function Work() {
       "hero": `${theBreakLogo}`,
     },
     {
-      "title": "Very Cool ↗",
+      "title": "Very Cool",
       "link": "https://damianmakki.github.io/verycoolweekly/",
       "description": "A weekly newsletter for designers and developers.",
       "hero": `${veryCoolLogo}`,
@@ -92,13 +102,13 @@ export default function Work() {
       "hero": `${tpvLogo}`,
     },
     {
-      "title": "GFL Foods ↗",
+      "title": "GFL Foods",
       "link": "https://glutenfreepitas.com/",
       "description": "Helping individuals live a gluten-free lifestyle.",
       "hero": `${gflLogo}`,
     },
     {
-      "title": "CLImate ↗",
+      "title": "CLImate",
       "link": "https://github.com/thephpleague/climate",
       "description": "PHP's best friend for the terminal.",
       "hero": `${climateLogo}`,
@@ -127,13 +137,14 @@ export default function Work() {
 
   return (
     <Layout location="work" title={pageTitle}>
+      <Seo title="Work" />
       <section>
         <h1>{pageTitle}</h1>
         <p>From startups to industry leaders, Ruckus Labs partners with clients of all types to build ideas, products, and always put users first.</p>
       </section>
       <section className="bleed">
         <nav>
-          <h2>User Interfaces</h2>
+          <h2>User Interfaces & User Experience Design</h2>
         </nav>
         <WorkCarousel items={userInterfaceItems} />
       </section>
