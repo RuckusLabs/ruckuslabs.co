@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkruckus_labs_gatsby=self.webpackChunkruckus_labs_gatsby||[]).push([[395],{7496:function(e,n,r){r.r(n),r.d(n,{default:function(){return t}});var u=r(7294);function t(){return u.createElement("section",null,u.createElement("p",null,"Looking for more? Browse more work."))}}}]);
+//# sourceMappingURL=component---src-pages-work-browse-more-js-8b3a7d7096f4fa42c115.js.map
