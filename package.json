@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "ruckus-labs-gatsby",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "description": "Ruckus Labs on Gatsby",
+  "version": "0.0.1",
+  "author": "Damian Makki <damian@ruckuslabs.co>",
   "dependencies": {
     "@fancyapps/ui": "^4.0.18",
     "@fontsource/inter": "^4.5.1",
@@ -41,9 +38,9 @@
     "gh-pages": "^3.2.3",
     "prettier": "^2.5.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/ruckuslabs/",
   "keywords": [
-    "gatsby"
+    "ruckus"
   ],
   "license": "0BSD",
   "main": "n/a",
