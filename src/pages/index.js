@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-
+      <Seo title="Ruckus Labs | Dedicated to the pursuit of empathetic design."></Seo>
       <section>
         <h1>Dedicated to the pursuit of empathetic design.</h1>
         <p>The synthesis of aesthetics, business goals, and a deep understanding of user behavior into cohesive, focused digital products.</p>
