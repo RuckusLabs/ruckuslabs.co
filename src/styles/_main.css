@@ -4,6 +4,7 @@
 @import "base";
 @import "typography";
 @import "layout";
+@import "animation";
 
 /* Pages */
 @import "pages/_main.css";
