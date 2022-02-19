@@ -1,0 +1,18 @@
+.fadeInDown {
+  animation: fadeInDown 0.75s normal forwards ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeInDown {
+  from {
+    visibility: hidden;
+    top: -75px;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    top: 0;
+    opacity: 1;
+  }
+}
