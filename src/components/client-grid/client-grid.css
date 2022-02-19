@@ -29,13 +29,12 @@
 
 .client-logo:hover img {
   opacity: 1;
-  transform: scale(205%);
+  transform: scale(2.05);
   backface-visibility: hidden;
 }
 
 .client-logo img {
-  transform: scale(200%);
-  transition: opacity var(--global-animation-timing) ease-in-out,
-    transform var(--global-animation-timing) ease-in-out;
+  transform: scale(2);
+  transition: opacity var(--global-animation-timing) ease-in-out, transform var(--global-animation-timing) ease-in-out;
   opacity: 0.5;
 }
