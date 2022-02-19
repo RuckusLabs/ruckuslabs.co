@@ -57,6 +57,12 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .swiper-slide:hover figure {
+    background-size: 150%;
+  }
+}
+
 .swiper-slide:hover .tag {
   opacity: 1;
   white-space: pre-wrap;
