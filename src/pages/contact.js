@@ -12,8 +12,8 @@ const ContactPage = ({ data, location }) => {
       <section>
         <Seo title="Contact" />
         <h1>Contact</h1>
-        <p>Looking for an estimate on a project? Want to say hi?</p>
-        <p>Send an email to <a className="external" href="mailto:hi@ruckuslabs.co">hi@ruckuslabs.co</a>.</p>
+        <p>Want to chat about your business idea? Need a logo? Looking for an estimate on a project?</p>
+        <p>To get started, send an email to <a className="external" href="mailto:hi@ruckuslabs.co">hi@ruckuslabs.co</a>.</p>
       </section>
     </Layout>
 
