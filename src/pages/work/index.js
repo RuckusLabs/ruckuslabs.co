@@ -155,7 +155,7 @@ export default function Work() {
         <WorkCarousel items={brandingItems} />
       </section>
       <section>
-        <p>Interested to see how Ruckus Labs can help you achieve your business goals and build first-class digital products? <a href="#">Let's chat</a>.</p>
+        <p>Interested to see how Ruckus Labs can help you achieve your business goals and build first-class digital products? <a href="/contact">Let's chat</a>.</p>
       </section>
       {/* <section className="bleed">
         <nav>
