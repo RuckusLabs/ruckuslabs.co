@@ -104,6 +104,7 @@ export default function WorkPage() {
         <p>Lawline's Credit Tracker was a breakthrough in the industry. I was responsible for developing the UI of the product – keeping track of user's credit states, giving them a glanceable way of checking their progress, and providing quick links to important information like requirements and course certificates.</p>
         <ShowcaseGrid gallery="credit-tracker" items={creditTrackerItems} />
       </section>
+      <BrowseMore />
     </Layout>
 
   )

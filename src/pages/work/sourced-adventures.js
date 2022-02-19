@@ -71,6 +71,7 @@ export default function WorkPage() {
         <p>High quality trip photos combine with modern typography to invoke a "roughing it" feel. We wanted to convey the rawness that comes with adventuring while blending the comfort of having a seasoned guide by your side the whole time.</p>
         <ShowcaseGrid items={detailPageSlider} />
       </section>
+      <BrowseMore />
     </Layout>
 
   )

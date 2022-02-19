@@ -87,6 +87,9 @@ export default function WorkPage() {
         <p>It was an interesting challenge to blend the tried-and-true UX of a podcast-style player with some of Lawline's core products like SmartNotes, Course Materials, and presentation syncing.</p>
         <ShowcaseGrid gallery="more-screens" items={moreScreensSlider} />
       </section>
+      <section>
+        <BrowseMore />
+      </section>
     </Layout>
   )
 }
