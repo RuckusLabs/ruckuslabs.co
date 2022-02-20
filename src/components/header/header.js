@@ -15,13 +15,13 @@ import Burger from "./burger.svg";
 
 export default function Header() {
   return (
-    <nav className={headerStyles.header}>
+    <header className={headerStyles.header}>
       <Link to="/"><img src={RuckusLogo} alt="Ruckus Labs." /></Link>
       <Menu menuButton={<img className={headerStyles.burger} src={Burger} alt="Menu" />} transition>
         <MenuItem><Link to="/">Home</Link></MenuItem>
         <MenuItem><Link to="/work">Work</Link></MenuItem>
         <MenuItem><Link to="/contact">Contact</Link></MenuItem>
       </Menu>
-    </nav>
+    </header>
   )
 }
