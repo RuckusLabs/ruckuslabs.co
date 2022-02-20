@@ -136,6 +136,7 @@ export default function WorkPage() {
         <ShowcaseGrid gallery="iconography-illustration" items={illustrationSlider} />
         <ShowcaseGrid gallery="deck" items={deckSlider} />
       </section>
+      <BrowseMore />
     </Layout>
   )
 }
