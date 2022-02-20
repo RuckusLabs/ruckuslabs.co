@@ -1,12 +1,12 @@
 .fadeInDown {
-  animation: fadeInDown 0.75s normal forwards ease-in-out;
+  animation: fadeInDown 1.25s normal forwards cubic-bezier(0.57, 2, 0.34, 1);
   position: relative;
 }
 
 @keyframes fadeInDown {
   from {
     visibility: hidden;
-    top: -75px;
+    top: -25px;
     opacity: 0;
   }
 
