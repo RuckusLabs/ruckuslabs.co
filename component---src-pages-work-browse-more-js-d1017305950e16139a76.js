@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkruckus_labs_gatsby=self.webpackChunkruckus_labs_gatsby||[]).push([[395],{7496:function(e,t,r){r.r(t),r.d(t,{default:function(){return n}});var u=r(7294);function n(){return u.createElement("section",null,u.createElement("p",null,"Liked what you saw? ",u.createElement("a",{href:"/work"},"Browse more work"),"."))}}}]);
+//# sourceMappingURL=component---src-pages-work-browse-more-js-d1017305950e16139a76.js.map
