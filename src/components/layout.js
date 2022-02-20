@@ -13,19 +13,26 @@ const Layout = ({ location, title, children }) => {
   useEffect(() => {
 
     var observer = new IntersectionObserver(changes => {
+
+      let n = 0;
       changes.forEach(change => {
-        change.isIntersecting && change.target.classList.add('fadeInDown');
+
+        if (change.isIntersecting) {
+          change.target.classList.add('fadeInDown');
+          change.target.style.animationDelay = `${n}s`
+        }
+        n = n + 0.25;
       });
     }, {});
 
-    function addAnimation(element) {
-      let animatedItems = document.querySelectorAll(element);
+    function addAnimation(elements) {
+      let animatedItems = document.querySelectorAll(elements);
       animatedItems.forEach(item => {
         observer.observe(item);
       })
     }
 
-    addAnimation('section');
+    addAnimation('section, footer');
   }, []);
 
   return (
