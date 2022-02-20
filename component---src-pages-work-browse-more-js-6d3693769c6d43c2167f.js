@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_blog=self.webpackChunkgatsby_starter_blog||[]).push([[395],{7496:function(e,t,r){r.r(t),r.d(t,{default:function(){return o}});var n=r(7294);function o(){return n.createElement("section",null,n.createElement("p",null,"Looking for more? Browse more work."))}}}]);
-//# sourceMappingURL=component---src-pages-work-browse-more-js-6d3693769c6d43c2167f.js.map
