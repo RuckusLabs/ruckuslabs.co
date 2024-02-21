@@ -49,15 +49,7 @@
   max-width: 100%;
 }
 
-.showcase-grid-item:hover img {
-  cursor: zoom-in;
-}
-
 .showcase-grid-item img {
   width: 100%;
   transition: transform var(--global-animation-timing);
-}
-
-.showcase-grid-item:hover img {
-  transform: scale(105%);
 }

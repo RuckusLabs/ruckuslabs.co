@@ -29,7 +29,6 @@
 
 .client-logo:hover img {
   opacity: 1;
-  transform: scale(2.05);
   backface-visibility: hidden;
 }
 

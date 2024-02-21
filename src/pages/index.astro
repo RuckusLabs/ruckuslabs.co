@@ -1,0 +1,87 @@
+---
+import Layout from '../components/layout.astro';
+
+import Seo from "../components/seo";
+import ClientGrid from "../components/client-grid/client-grid.astro";
+import WorkCarousel from "../components/work-carousel/work-carousel.jsx";
+import Services from "../components/services/services.astro";
+
+import * as indexStyles from "./index.module.css";
+
+import O30U30Img from "../images/frontpage/outdoor-30-under-30-hero.jpg";
+import SearchAndSendImg from "../images/frontpage/search-and-send-hero.jpg";
+import LawlineImg from "../images/frontpage/lawline-web-hero.jpg";
+import ChicoryImg from "../images/frontpage/chicory-brand-hero.jpg";
+import LawlineAppImg from "../images/frontpage/lawline-app-hero.jpg";
+
+const workItems = [
+  // {
+  //   title: "Outdoor 30 Under 30",
+  //   description: "The outdoor industry's brightest young minds.",
+  //   tags: ["UI Design", "Design Systems", "Development"],
+  //   hero: `${O30U30Img.src}`,
+  //   link: "https://spectacular-sfogliatella-1143c8.netlify.app/",
+  // },
+  // {
+  //   title: "Search & Send",
+  //   description:
+  //     "Hire coaches, instructors and group fitness experts with ease.",
+  //   tags: ["Branding", "UI Design", "Development"],
+  //   hero: `${SearchAndSendImg.src}`,
+  //   link: "https://search.staffingfitness.com",
+  // },
+  // {
+  //   title: "Lawline Web Interface",
+  //   description:
+  //     "Building the #1 CLE platform used by thousands of attorneys throughout the United States.",
+  //   tags: ["UI Design", "Design Systems", "Development"],
+  //   hero: `${LawlineImg.src}`,
+  //   link: "/work/lawline",
+  // },
+  {
+    title: "Chicory Brand Development",
+    description:
+      "Developing a cohesive brand and design strategy for a startup disrupting the online shopping space.",
+    tags: ["Logo Design", "Branding Design", "Design Systems", "Print Design"],
+    hero: `${ChicoryImg.src}`,
+    link: "/work/chicory",
+  },
+  {
+    title: "Lawline iOS and Android Apps",
+    description:
+      "Translating the Lawline experience to native mobile applications.",
+    tags: ["UI Design", "Design System", "Development"],
+    hero: `${LawlineAppImg.src}`,
+    link: "/work/lawline-app",
+  },
+];
+---
+
+<Layout title="Home">
+    <section>
+      <h1 className={indexStyles.heading}>
+        Dedicated to the pursuit of empathetic design.
+      </h1>
+      <p>
+        The synthesis of aesthetics, business goals, and a deep understanding of
+        user behavior into cohesive, focused digital products.
+      </p>
+    </section>
+
+    <section>
+      <h2>Design & Development Services</h2>
+      <Services />
+    </section>
+
+    <section className="bleed">
+      <nav className={indexStyles.sectionHeader}>
+        <h2>Featured Work</h2>
+      </nav>
+      <!-- <WorkCarousel items={workItems} /> -->
+    </section>
+
+    <section>
+      <h2>Featured Clients</h2>
+      <ClientGrid />
+    </section>
+</Layout>

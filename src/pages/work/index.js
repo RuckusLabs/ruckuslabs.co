@@ -4,8 +4,9 @@ import Seo from "../../components/seo";
 
 import WorkCarousel from "../../components/work-carousel/work-carousel";
 
+import O30U30Img from "../images/frontpage/outdoor-30-under-30-hero.jpg";
+import SearchAndSendImg from "../images/frontpage/search-and-send-hero.jpg";
 import LawlineImg from "../../images/frontpage/lawline-web-hero.jpg";
-import ChicoryImg from "../../images/frontpage/chicory-brand-hero.jpg";
 import LawlineAppImg from "../../images/frontpage/lawline-app-hero.jpg";
 import SAHero from "../../images/work/sourced-adventures/sa-hero.jpg";
 import TransacctsHero from "../../images/work/transaccts/transaccts-hero.jpg";
@@ -24,11 +25,24 @@ import veryCoolLogo from "../../images/logos/very-cool-hero.jpg";
 export default function Work() {
 
   const userInterfaceItems = [
-    // {
-    //   "title": "Aya Healthcare",
-    //   "description": "The #1 rated travel nursing agency.",
-    //   "hero": `https://via.placeholder.com/200x200`,
-    // },
+    {
+      "title": "Outdoor 30 Under 30",
+      "link": "https://spectacular-sfogliatella-1143c8.netlify.app/",
+      "description": "The outdoor industry's brightest young minds.",
+      "hero": `${O30U30Img}`,
+    },
+    {
+      "title": "Search & Send",
+      "link": "https://search.staffingfitness.com",
+      "description": "Hire coaches, instructors and group fitness experts with ease.",
+      "hero": `${SearcnAndSendImg}`,
+    },
+    {
+      "title": "Aya Healthcare",
+      "link": "https://www.ayahealthcare.com",
+      "description": "The #1 rated travel nursing agency.",
+      "hero": `${AyaHealthcareImg}`,
+    },
     {
       "title": "Lawline Web Interface",
       "link": "/work/lawline",

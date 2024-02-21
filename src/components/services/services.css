@@ -5,6 +5,8 @@ article {
   padding: var(--global-spacing);
 }
 
+*  {border: 1px solid orange; }
+
 article img {
   width: 25px;
   height: 25px;

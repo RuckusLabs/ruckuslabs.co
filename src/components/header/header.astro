@@ -1,0 +1,24 @@
+---
+// import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
+
+import * as headerStyles from "./header.module.css";
+
+import RuckusLogo from "../../images/common/ruckus-logo.svg";
+import Burger from "./burger.svg";
+---
+
+<header class={headerStyles.header}>
+  <a href="/"><img src={RuckusLogo.src} alt="Ruckus Labs" /></a>
+  <Menu
+    menuButton={(
+      <img class={headerStyles.burger} src={Burger.src} alt="Menu" />
+    )}
+    transition
+  >
+   <a href="/">Home</a></MenuItem>
+   <a href="/work">Work</a></MenuItem>
+   <a href="/contact">Contact</a></MenuItem>
+  </Menu>
+</header>

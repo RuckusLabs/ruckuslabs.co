@@ -1,35 +1,25 @@
 {
-  "name": "ruckus-labs-gatsby",
+  "name": "ruckus-labs-astro",
   "private": true,
-  "description": "Ruckus Labs on Gatsby",
-  "version": "0.0.1",
+  "type": "module",
+  "description": "Ruckus Labs on Astro",
   "author": "Damian Makki <damian@ruckuslabs.co>",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
+    "astro": "^4.4.1",
     "@fancyapps/ui": "^4.0.18",
     "@fontsource/inter": "^4.5.1",
     "@szhsin/react-menu": "^2.3.2",
-    "gatsby": "^4.5.1",
-    "gatsby-plugin-feed": "^4.5.0",
-    "gatsby-plugin-gatsby-cloud": "^4.5.0",
-    "gatsby-plugin-google-analytics": "^4.5.0",
-    "gatsby-plugin-image": "^2.5.1",
-    "gatsby-plugin-manifest": "^4.5.2",
-    "gatsby-plugin-offline": "^5.5.0",
-    "gatsby-plugin-react-helmet": "^5.5.0",
-    "gatsby-plugin-sharp": "^4.5.1",
-    "gatsby-plugin-transition-link": "^1.20.5",
-    "gatsby-remark-copy-linked-files": "^5.5.0",
-    "gatsby-remark-images": "^6.5.0",
-    "gatsby-remark-prismjs": "^6.5.0",
-    "gatsby-remark-responsive-iframe": "^5.5.0",
-    "gatsby-remark-smartypants": "^5.5.0",
-    "gatsby-source-filesystem": "^4.5.1",
-    "gatsby-transformer-remark": "^5.5.0",
-    "gatsby-transformer-sharp": "^4.5.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
     "swiper": "^7.4.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
@@ -37,25 +27,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "prettier": "^2.5.1"
-  },
-  "homepage": "https://github.com/ruckuslabs/",
-  "keywords": [
-    "ruckus"
-  ],
-  "license": "0BSD",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }

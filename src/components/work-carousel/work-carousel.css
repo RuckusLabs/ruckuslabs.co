@@ -53,14 +53,7 @@
 }
 
 .swiper-slide:hover figure {
-  background-size: 105%;
   opacity: 1;
-}
-
-@media only screen and (max-width: 600px) {
-  .swiper-slide:hover figure {
-    background-size: 150%;
-  }
 }
 
 .swiper-slide:hover .tag {
@@ -79,7 +72,6 @@ figure {
   justify-content: center;
   height: 550px;
   max-width: 900px;
-  transition: background-size var(--global-animation-timing);
 }
 
 figure img {
