@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruckus Labs | Digital products built for context.</title>
+  <link rel="icon" type="image/svg+xml" href="./src/images/favicon.svg">
+  <link rel="icon" type="image/png" href="./src/images/favicon.png" sizes="32x32">
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <script>
+    // Apply saved theme before render to avoid flash
+    const t = localStorage.getItem('theme');
+    if (t) document.documentElement.dataset.theme = t;
+  </script>
+  <script type="module" src="./src/js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <span class="icon-sunrise" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M17 18a5 5 0 0 0-10 0" />
+        <line x1="12" x2="12" y1="2" y2="9" />
+        <line x1="4.22" x2="5.64" y1="10.22" y2="11.64" />
+        <line x1="1" x2="3" y1="18" y2="18" />
+        <line x1="21" x2="23" y1="18" y2="18" />
+        <line x1="18.36" x2="19.78" y1="11.64" y2="10.22" />
+        <line x1="23" x2="1" y1="22" y2="22" />
+        <polyline points="8 6 12 2 16 6" />
+      </svg>
+    </span>
+    <span class="icon-sunset" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M17 18a5 5 0 0 0-10 0" />
+        <line x1="12" x2="12" y1="9" y2="2" />
+        <line x1="4.22" x2="5.64" y1="10.22" y2="11.64" />
+        <line x1="1" x2="3" y1="18" y2="18" />
+        <line x1="21" x2="23" y1="18" y2="18" />
+        <line x1="18.36" x2="19.78" y1="11.64" y2="10.22" />
+        <line x1="23" x2="1" y1="22" y2="22" />
+        <polyline points="16 5 12 9 8 5" />
+      </svg>
+    </span>
+  </button>
+
+  <header class="site-header">
+    <img src="./src/images/common/ruckus-labs-logo.svg" alt="Ruckus Labs" class="site-logo">
+    <h1>Digital products <span class="highlight">built for context.</span></h1>
+    <h2>In an era of AI-generated noise, we focus on the filter. Synthesizing business goals and aesthetics into polished, cohesive products that prioritize the user experience over the hype.</h2>
+  </header>
+
+  <section class="logo-carousel-section">
+    <p class="carousel-label">Ruckus Labs has worked with:</p>
+    <div class="logo-carousel">
+      <div class="logo-slide" aria-live="polite">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <p>Ruckus Labs is a design and development studio for teams that prioritize polish over tropes. We help founders build digital products that work in the real world – not just on a slide deck.</p>
+    <p>We've leaned heavily into AI to supercharge the development process, allowing us to move from ideation to a high-fidelity product with a speed that traditional studios can't match. It's not about shortcuts but about using the best tools available to get to the best version of the product faster.</p>
+
+    <div class="services-list">
+      <details class="service-item">
+        <summary class="service-summary">Brand Identity & Narrative<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+        <div class="service-body">
+          <p class="service-desc">Your brand isn't just a logo and a color palette; it's a visual language. We don't do "generic professional." We build distinct identity systems that reflect who you actually are and why you exist. The goal is clarity. Stripping away the noise until you have a presence that is honest, focused, and objectively high-quality.</p>
+        </div>
+      </details>
+      <details class="service-item">
+        <summary class="service-summary">Digital Design &amp; Development<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+        <div class="service-body">
+          <p class="service-desc">We don't design a mockup and toss it over a wall to a developer. We own the full stack and handle the entire lifecycle from the first wireframe to the final deployment. This means no loss in translation, no "that's not possible" during production, and a final product that is actually performant and polished.</p>
+        </div>
+      </details>
+      <details class="service-item">
+        <summary class="service-summary">Web &amp; Product Design<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+        <div class="service-body">
+          <p class="service-desc">Most interfaces are cluttered with guesswork and "industry standards" that don't actually work. We design interfaces based on the specific context of your user. Whether it's a high-conversion landing page or a complex SaaS tool, the focus is on removing friction and ensuring the product feels intuitive, not forced.</p>
+        </div>
+      </details>
+      <details class="service-item">
+        <summary class="service-summary">Design Systems<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+        <div class="service-body">
+          <p class="service-desc">Consistency isn't a luxury. It's the baseline. We build scalable design systems that serve as a single source of truth for your product. By establishing a logic-based foundation, we ensure that as your product grows, it stays cohesive and polished rather than becoming a fragmented mess of one-off components.</p>
+        </div>
+      </details>
+    </div>
+
+    <p>Whether we're embedding with your team to launch a new product or stripping back an existing one to make it usable again, our approach is the same: filter out the noise, focus on the utility, and ensure the final result is objectively high-quality.</p>
+  </section>
+
+  <section class="projects">
+    <h3 class="section-label">Latest projects</h3>
+
+    <div class="project-row" data-project="somatic" role="button" tabindex="0" aria-label="Somatic project">
+      <img src="./src/images/logos/somatic-mini.svg" alt="" class="project-thumb">
+      <div class="project-info">
+        <span class="project-name">Somatic</span>
+        <span class="project-tag">Train with your body. Not against it.</span>
+      </div>
+      <span class="project-open" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg></span>
+    </div>
+
+    <div class="project-row" data-project="trace" role="button" tabindex="0" aria-label="Trace project">
+      <img src="./src/images/logos/trace-mini.svg" alt="" class="project-thumb">
+      <div class="project-info">
+        <span class="project-name">Trace</span>
+        <span class="project-tag">Overlay screenshots on any app and compare pixel by pixel. Built for macOS.</span>
+      </div>
+      <span class="project-open" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg></span>
+    </div>
+
+    <div class="project-row" data-project="schvitzin" role="button" tabindex="0" aria-label="Schvitzin' project">
+      <img src="./src/images/logos/schvitzin-mini.svg" alt="" class="project-thumb">
+      <div class="project-info">
+        <span class="project-name">Schvitzin'</span>
+        <span class="project-tag">The original sauna headgear.</span>
+      </div>
+      <span class="project-open" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg></span>
+    </div>
+
+  </section>
+
+  <section class="archives">
+    <h3 class="section-label">From the archives</h3>
+
+    <div class="archive-row" data-project="job-boardly" role="button" tabindex="0" aria-label="Job Boardly project">
+      <img src="./src/images/logos/jb-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Job Boardly</span>
+      <span class="archive-tags">Brand Identity, Web Design</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2024</span>
+    </div>
+
+    <div class="archive-row" data-project="little-herb-places" role="button" tabindex="0" aria-label="Little Herb Places project">
+      <img src="./src/images/logos/little-herb-places-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Little Herb Places</span>
+      <span class="archive-tags">Brand Identity, Narrative, Web Design</span>
+      <span class="archive-year">2024</span>
+    </div>
+
+    <div class="archive-row" data-project="get-outdoor-jobs" role="button" tabindex="0" aria-label="Get Outdoor Jobs project">
+      <img src="./src/images/logos/get-outdoor-jobs-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Get Outdoor Jobs</span>
+      <span class="archive-tags">Brand Identity</span>
+      <span class="archive-year">2023</span>
+    </div>
+
+    <div class="archive-row" data-project="glamping-on-wine" role="button" tabindex="0" aria-label="Glamping on Wine project">
+      <img src="./src/images/logos/glamping-on-wine-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Glamping on Wine</span>
+      <span class="archive-tags">Brand Identity, Narative, Web Design</span>
+      <span class="archive-year">2022</span>
+    </div>
+
+    <div class="archive-row" data-project="apple" role="button" tabindex="0" aria-label="Apple project">
+      <img src="./src/images/logos/apple-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Apple</span>
+      <span class="archive-tags">Web Development</span>
+      <span class="archive-year">2022</span>
+    </div>
+
+    <div class="archive-row" data-project="welcome" role="button" tabindex="0" aria-label="Welcome project">
+      <img src="./src/images/logos/welcome-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Welcome</span>
+      <span class="archive-tags">Product Design</span>
+      <span class="archive-year">2021</span>
+    </div>
+
+    <div class="archive-row" data-project="old-landing" role="button" tabindex="0" aria-label="Old Landing project">
+      <img src="./src/images/logos/old-landing-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Old Landing </span>
+      <span class="archive-tags">Brand Identity, Narrative</span>
+      <span class="archive-year">2021</span>
+    </div>
+
+    <div class="archive-row" data-project="journey" role="button" tabindex="0" aria-label="Journey project">
+      <img src="./src/images/logos/journey-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Journey</span>
+      <span class="archive-tags">Product Design</span>
+      <span class="archive-year">2021</span>
+    </div>
+
+    <div class="archive-row" data-project="molo" role="button" tabindex="0" aria-label="Molo project">
+      <img src="./src/images/logos/molo-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Molo</span>
+      <span class="archive-tags">Brand Identity, Narrative, Design System</span>
+      <span class="archive-year">2020</span>
+    </div>
+
+    <div class="archive-row" data-project="transaccts" role="button" tabindex="0" aria-label="Transaccts project">
+      <img src="./src/images/logos/transaccts-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Transaccts</span>
+      <span class="archive-tags">Web Development, Design System</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2019</span>
+    </div>
+
+    <div class="archive-row" data-project="ptc" role="button" tabindex="0" aria-label="PTC project">
+      <img src="./src/images/logos/pct-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Vuforia</span>
+      <span class="archive-tags">AR Design and Development</span>
+      <span class="archive-year">2018</span>
+    </div>
+
+    <div class="archive-row" data-project="f45" role="button" tabindex="0" aria-label="f45 project">
+      <img src="./src/images/logos/f45-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">F45</span>
+      <span class="archive-tags">Digital Design</span>
+      <span class="archive-year">2018</span>
+    </div>
+
+    <div class="archive-row" data-project="chicory" role="button" tabindex="0" aria-label="chicory project">
+      <img src="./src/images/logos/chicory-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Chicory</span>
+      <span class="archive-tags">Brand Identity, Narrative, Web Development, Product Design</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2017</span>
+    </div>
+
+    <div class="archive-row" data-project="very-cool-weekly" role="button" tabindex="0" aria-label="very-cool-weekly project">
+      <img src="./src/images/logos/very-cool-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Very Cool Weekly</span>
+      <span class="archive-tags">Brand Identity, Digital Design, Web Development</span>
+      <span class="archive-year">2017</span>
+    </div>
+
+    <div class="archive-row" data-project="otf" role="button" tabindex="0" aria-label="OrangeTheory Fitness project">
+      <img src="./src/images/logos/otf-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">OrangeTheory Fitness</span>
+      <span class="archive-tags">Digital Design</span>
+      <span class="archive-year">2016</span>
+    </div>
+
+    <div class="archive-row" data-project="lawline-app" role="button" tabindex="0" aria-label="Lawline iOS and Android project">
+      <img src="./src/images/logos/lawline-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Lawline iOS & Android</span>
+      <span class="archive-tags">Digital Development, Product Design, Design System</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2015</span>
+    </div>
+
+    <div class="archive-row" data-project="neso" role="button" tabindex="0" aria-label="neso project">
+      <img src="./src/images/logos/neso-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">neso</span>
+      <span class="archive-tags">Brand Identity, Narrative</span>
+      <span class="archive-year">2014</span>
+    </div>
+
+    <div class="archive-row" data-project="lawline" role="button" tabindex="0" aria-label="Lawline project">
+      <img src="./src/images/logos/lawline-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Lawline</span>
+      <span class="archive-tags">Digital Development, Product Design, Design System</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2013</span>
+    </div>
+
+    <div class="archive-row" data-project="sourced" role="button" tabindex="0" aria-label="Sourced Adventures project">
+      <img src="./src/images/logos/sourced-adventures-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Sourced Adventures</span>
+      <span class="archive-tags">Brand Identity, Narrative, Product Design</span>
+      <span class="archive-case-study">Case Study</span>
+      <span class="archive-year">2013</span>
+    </div>
+
+    <div class="archive-row" data-project="avion" role="button" tabindex="0" aria-label="Avion project">
+      <img src="./src/images/logos/tequila-avion-mini.svg" alt="" class="archive-thumb">
+      <span class="archive-name">Tequila Avion</span>
+      <span class="archive-tags">Web Development</span>
+      <span class="archive-year">2013</span>
+    </div>
+
+    <div class="archives-fade" aria-hidden="true"></div>
+  </section>
+
+  <section class="pricing">
+    <h3 class="section-label">Pricing</h3>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <p class="pricing-type">Hourly</p>
+        <p class="pricing-amount">$225<span class="pricing-unit">/hr</span></p>
+        <ul class="pricing-features">
+          <li>Billed in 1-hour increments</li>
+          <li>No retainer required</li>
+          <li>Ideal for focused tasks and audits</li>
+          <li>Start anytime, stop anytime</li>
+        </ul>
+        <a href="mailto:hello@ruckuslabs.com?subject=Hourly%20inquiry" class="button">Get started</a>
+      </div>
+
+      <div class="pricing-card">
+        <p class="pricing-type">Per project</p>
+        <p class="pricing-amount">$5,000<span class="pricing-unit"> and up</span></p>
+        <ul class="pricing-features">
+          <li>Fixed scope, fixed price</li>
+          <li>Full discovery and strategy included</li>
+          <li>Dedicated focus for the duration</li>
+          <li>Defined milestones and deliverables</li>
+        </ul>
+        <a href="mailto:hello@ruckuslabs.com?subject=Project%20inquiry" class="button">Kick off a project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonial">
+    <div class="testimonial-track">
+
+      <div class="testimonial-item active">
+        <blockquote class="quote">"Ruckus Labs transformed our brand from the ground up. Their strategic approach and attention to detail helped us connect with our audience in ways we never thought possible."</blockquote>
+        <div class="attribution">
+          <img alt="Hillary (Reeves) Baker-Saito's headshot" src="./src/images/testimonials/hillary-reeves-profile.jpg" class="attribution-photo" />
+          <span class="attribution-name">Hillary (Reeves) Baker-Saito</span>
+          <span class="attribution-role">VP of Marketing</span>
+        </div>
+      </div>
+
+      <div class="testimonial-item">
+        <blockquote class="quote">"Working with Ruckus Labs felt like having an extension of our own team. They understood our vision from day one and delivered a product that exceeded every expectation. Truly world-class execution."</blockquote>
+        <div class="attribution">
+          <img alt="Kyle Davidson's headshot" src="./src/images/testimonials/kyle-davidson-profile.jpg" class="attribution-photo" />
+          <span class="attribution-name">Kyle Davidson</span>
+          <span class="attribution-role">Founder, Sourced Adventures</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="testimonial-dots" role="tablist" aria-label="Testimonials">
+      <button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+      <button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <a href="mailto:hello@ruckuslabs.com" class="button">Get in touch</a>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2017 - 2026 Ruckus Labs. All rights reserved.</p>
+    <img src="./src/images/common/ruckus-labs-logo.svg" alt="Ruckus Labs" class="site-logo">
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-hero-wrap">
+        <img class="modal-hero" src="" alt="">
+      </div>
+      <img class="modal-logo" src="" alt="">
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-tag"></p>
+      <p class="modal-description"></p>
+      <a class="modal-link" target="_blank" rel="noopener noreferrer"></a>
+      <div class="modal-sections"></div>
+      <div class="modal-images"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img class="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <p class="lightbox-title"></p>
+        <p class="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

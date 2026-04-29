@@ -1,0 +1,107 @@
+.testimonial {
+  padding: 96px 0;
+  text-align: center;
+}
+
+/* Stack all items in the same grid cell so height = tallest item */
+.testimonial-track {
+  display: grid;
+  grid-template-areas: "stack";
+  margin-bottom: 32px;
+}
+
+.testimonial-item {
+  margin-top: auto;
+  grid-area: stack;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.testimonial-item.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.quote {
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--fg);
+  font-style: italic;
+  margin: 0 0 28px;
+  quotes: none;
+  font-family: var(--font-headline);
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.attribution-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
+.attribution-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.attribution-role {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Dot indicators */
+.testimonial-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: var(--fg);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease;
+}
+
+.dot.active {
+  width: 28px;
+  background: var(--muted);
+}
+
+/* Timer fill sweeps left → right on active dot */
+.dot.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--fg);
+  transform: scaleX(0);
+  opacity: 1;
+  transform-origin: left;
+  border-radius: inherit;
+  animation: dotFill var(--duration, 6s) linear forwards;
+}
+
+@keyframes dotFill {
+  to {
+    transform: scaleX(1);
+  }
+}

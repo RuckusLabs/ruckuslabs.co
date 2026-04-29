@@ -1,0 +1,27 @@
+section {
+  visibility: visible;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+section + section {
+  margin-top: 0;
+}
+
+.site-header,
+.logo-carousel-section,
+.about,
+.work-intro,
+.projects,
+.archives,
+.pricing,
+.testimonial,
+.cta,
+.site-footer {
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}

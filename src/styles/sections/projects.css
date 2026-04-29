@@ -1,0 +1,87 @@
+.projects {
+  padding: 56px 0 64px;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--divider);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.project-row:first-of-type {
+  border-top: 1px solid var(--divider);
+}
+
+.project-row:hover {
+  opacity: 0.65;
+}
+
+.project-row:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.project-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid var(--divider);
+  box-sizing: border-box;
+  padding: 5px;
+  transform: translateZ(0);
+}
+
+.project-thumb--filter {
+  filter: var(--logo-filter);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.project-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-tag {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-open {
+  flex-shrink: 0;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.project-open svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.project-row:hover .project-open {
+  opacity: 1;
+}

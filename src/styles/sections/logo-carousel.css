@@ -1,0 +1,77 @@
+.logo-carousel-section {
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.carousel-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+.logo-carousel {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Both out and in animate per logo-img for the wave stagger */
+
+@keyframes logoOut {
+  from {
+    opacity: var(--logo-opacity);
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes logoIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: var(--logo-opacity);
+    transform: translateY(0);
+  }
+}
+
+.logo-slide.slide-out .logo-img {
+  animation: logoOut 350ms ease forwards;
+  animation-delay: var(--logo-delay, 0ms);
+}
+
+.logo-slide.slide-in .logo-img {
+  animation: logoIn 350ms ease forwards;
+  animation-delay: var(--logo-delay, 0ms);
+  opacity: 0;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+  will-change: opacity, transform;
+}
+
+.logo-img:hover {
+  opacity: 0.7;
+}

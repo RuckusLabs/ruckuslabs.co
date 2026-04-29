@@ -1,0 +1,34 @@
+/* Dark (default) */
+:root {
+  --bg: #111;
+  --fg: rgba(255, 255, 255, 0.88);
+  --muted: rgba(255, 255, 255, 0.55);
+  --divider: rgba(255, 255, 255, 0.08);
+  --accent-color: rgba(216, 52, 0, 1);
+  --logo-opacity: 0.35;
+  --logo-filter: brightness(0) invert(1);
+  --font: "Oakes Grotesk", -apple-system, sans-serif;
+  --font-headline: "Advercase", -apple-system, serif;
+}
+
+/* Light */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f4f1ec;
+    --fg: rgba(0, 0, 0, 0.85);
+    --muted: rgba(0, 0, 0, 0.58);
+    --divider: rgba(0, 0, 0, 0.09);
+    --logo-opacity: 0.45;
+    --logo-filter: brightness(0);
+  }
+}
+
+/* Light  */
+:root[data-theme="light"] {
+  --bg: #f4f1ec;
+  --fg: rgba(0, 0, 0, 0.85);
+  --muted: rgba(0, 0, 0, 0.38);
+  --divider: rgba(0, 0, 0, 0.09);
+  --logo-opacity: 0.45;
+  --logo-filter: brightness(0);
+}

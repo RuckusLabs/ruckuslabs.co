@@ -1,0 +1,52 @@
+html {
+  background: var(--bg);
+  transition: background-color 0.3s ease;
+}
+
+html,
+body {
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-headline);
+  font-size: 6rem;
+  font-weight: normal;
+  line-height: 1.15;
+  letter-spacing: -0.25rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: -0.1rem;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--muted);
+}
+
+.highlight {
+  color: var(--accent-color);
+}
