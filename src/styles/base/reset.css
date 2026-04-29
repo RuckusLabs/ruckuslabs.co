@@ -26,6 +26,7 @@ h2 {
   h1 {
     font-size: 3.5rem;
     line-height: 1.25;
+    letter-spacing: -0.1rem;
   }
 }
 
@@ -38,7 +39,7 @@ h2 {
   h2 {
     font-size: 1.6rem;
     line-height: 1.25;
-  }
+    letter-spacing: 0;
 }
 
 p {
