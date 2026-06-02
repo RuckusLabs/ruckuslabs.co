@@ -1,0 +1,86 @@
+.site-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 60px 0 48px;
+  min-height: 70dvh;
+}
+
+.site-header h2 {
+  margin-bottom: auto;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: auto;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--fg);
+  opacity: 0.5;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--divider);
+  opacity: 1;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Show sunrise in dark mode (clicking → light) */
+.icon-sunset {
+  display: none;
+}
+.icon-sunrise {
+  display: block;
+}
+
+/* Light via system */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .icon-sunrise {
+    display: none;
+  }
+  :root:not([data-theme="dark"]) .icon-sunset {
+    display: block;
+  }
+}
+
+/* Light via manual */
+:root[data-theme="light"] .icon-sunrise {
+  display: none;
+}
+:root[data-theme="light"] .icon-sunset {
+  display: block;
+}
+
+/* Dark via manual (explicit — sunrise stays visible) */
+:root[data-theme="dark"] .icon-sunrise {
+  display: block;
+}
+:root[data-theme="dark"] .icon-sunset {
+  display: none;
+}
