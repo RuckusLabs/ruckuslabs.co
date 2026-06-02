@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Oakes Grotesk";
+  src: url("../../fonts/OakesGrotesk-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oakes Grotesk";
+  src: url("../../fonts/OakesGrotesk-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oakes Grotesk";
+  src: url("../../fonts/OakesGrotesk-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Advercase";
+  src: url("../../fonts/Advercase-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Advercase";
+  src: url("../../fonts/Advercase-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
