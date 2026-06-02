@@ -13,10 +13,6 @@ body {
   padding: 0;
 }
 
-.highlight {
-  color: var(--accent-color);
-}
-
 h1,
 h2 {
   font-family: var(--font-headline);
@@ -39,17 +35,19 @@ h2 {
   letter-spacing: -0.1rem;
 }
 
-
 @media (max-width: 600px) {
   h2 {
     font-size: 1.6rem;
     line-height: 1.25;
     letter-spacing: 0;
-  }
+}
 
-  p {
-    font-size: 1.2rem;
-    line-height: 1.25;
-    color: var(--muted);
-  }
+p {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--muted);
+}
+
+.highlight {
+  color: var(--accent-color);
 }
