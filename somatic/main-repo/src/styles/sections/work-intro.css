@@ -1,0 +1,16 @@
+.work-intro {
+  padding: 56px 0 64px;
+}
+
+.work-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 20px;
+}

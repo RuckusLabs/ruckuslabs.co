@@ -1,0 +1,36 @@
+.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 11px 22px;
+  border: 1px solid var(--divider);
+  background-color: var(--accent-color);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.button:hover {
+  border-color: var(--fg);
+  opacity: 1;
+}
+
+.button--featured {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+@media (prefers-color-scheme: light) {
+  .button--featured {
+    border-color: rgba(0, 0, 0, 0.22);
+  }
+}
+
+.button--featured:hover {
+  border-color: var(--fg);
+}
