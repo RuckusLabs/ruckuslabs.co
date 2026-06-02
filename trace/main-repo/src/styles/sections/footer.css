@@ -1,0 +1,21 @@
+.site-footer {
+  padding: 40px;
+  border-top: 1px solid var(--divider);
+  text-align: center;
+  gap: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer img {
+  width: 100px;
+  justify-self: center;
+}
+
+.site-footer p {
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.5;
+  margin: 0;
+}
