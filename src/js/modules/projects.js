@@ -350,7 +350,8 @@ const PROJECTS = {
     tag: 'Product · Brand · Web',
     description: 'Trace is a macOS applications that allows users to overlay designs on top of development work to keep design and development aligned.',
     logo: './src/images/logos/trace-mini.svg',
-    link: 'https://damianmakki.github.io/trace/',
+    hero: './src/images/work/trace/trace-hero.png',
+    link: 'https://ruckuslabs.co/trace/',
     linkText: 'Download',
     logoFilter: 'none',
     sections: [
@@ -362,6 +363,21 @@ const PROJECTS = {
         heading: 'Development',
         body: 'Leaning into AI-assisted development, Trace was built using macOS-native Swift and Swift UI.',
       },
+      {
+        images: [
+          { src: './src/images/work/trace/step-1.png', },
+        ],
+      },
+      {
+        images: [
+          { src: './src/images/work/trace/step-2.png', },
+        ],
+      },
+      {
+        images: [
+          { src: './src/images/work/trace/step-3.png', },
+        ],
+      }
     ],
   },
   transaccts: {
