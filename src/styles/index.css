@@ -2,6 +2,7 @@
 @import url("./base/fonts.css");
 @import url("./base/variables.css");
 @import url("./base/reset.css");
+@import url("./base/helpers.css");
 
 /* Layout */
 @import url("./layout/containers.css");
@@ -49,10 +50,6 @@
 
   .modal-hero-wrap {
     margin: -32px -24px 24px;
-  }
-
-  .modal-hero {
-    height: 160px;
   }
 
   .modal-images {

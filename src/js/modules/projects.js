@@ -271,6 +271,7 @@ const PROJECTS = {
     tag: 'Brand · Digital',
     description: 'Schvitzin\' is a modern sauna and wellness community built around the ritual of heat therapy. We shaped the brand from the ground up — naming, identity, digital presence — and built a web experience that feels as intentional as the practice itself.',
     logo: './src/images/logos/schvitzin-full.svg',
+    hero: './src/images/work/schvitzin/schvitzin-hero.png',
     sections: [
       {
         heading: 'Scope',
