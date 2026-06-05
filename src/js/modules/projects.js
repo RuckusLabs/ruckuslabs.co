@@ -291,9 +291,11 @@ const PROJECTS = {
     name: 'Somatic',
     tag: 'Branding, Product, Development',
     description: 'Somatic is an upcoming app that focuses on helping athletes train with their body and not against it. By employing local-first AI to analyze movement patterns, Somatic gives users real-time feedback on their form and technique — helping them optimize performance while reducing the risk of injury.',
-    logo: '/src/images/logos/somatic-mini.svg',
+    logo: '/src/images/logos/somatic-colorized.svg',
+    hero: './src/images/work/somatic/somatic-hero.png',
     link: 'https://ruckuslabs.co/somatic',
     linkText: 'Visit Somatic',
+
     sections: [
       {
         heading: 'Design',
@@ -307,6 +309,11 @@ const PROJECTS = {
         heading: 'Development',
         body: 'Using AI-powered development tools, we were able to iterate on the product design rapidly — testing different feedback modalities, refining the UI based on user interactions, and optimizing the experience for real-world use. The result is a product that feels polished and responsive, with a level of nuance that would have been difficult to achieve without AI-assisted development.',
       },
+      {
+        images: [
+          { src: './src/images/work/somatic/trio-hero.png', title: '' },
+        ],
+      }
     ],
   },
   sourced: {
