@@ -252,3 +252,14 @@ footer a:hover {
     padding: var(--space-xl) var(--space-lg);
   }
 }
+
+/* Current app captures, rendered without altering the app UI. */
+.hero h2 { max-width: 680px; line-height: 1.35; }
+.hero-screens { display: flex; align-items: center; justify-content: center; gap: 18px; width: min(100%, 850px); margin: 46px 0 40px; }
+.phone-screen { display: block; width: 100%; height: auto; border: 3px solid #3d3d43; border-radius: 34px; background: #000; box-shadow: 0 18px 35px #0005; }
+.hero-content .hero-screens img { width: 30%; margin-top: 0; }
+.hero-screens .side-screen { transform: scale(.91); }
+.screen-stage { height: 380px; overflow: hidden; display: flex; justify-content: center; padding: 18px 10px 0; margin-bottom: 24px; border-radius: 18px; background: linear-gradient(145deg, #252b43, #17191e 70%); }
+.card .screen-stage img { width: 205px; height: auto; align-self: flex-start; margin: 0; }
+.callout .compatibility { font-size: 13px; line-height: 1.5; letter-spacing: 0; }
+@media (max-width: 600px) { .hero-screens { gap: 6px; } .phone-screen { border-width: 2px; border-radius: 22px; } .hero h2 { font-size: 18px; } .screen-stage { height: 340px; } .card .screen-stage img { width: 190px; } }
