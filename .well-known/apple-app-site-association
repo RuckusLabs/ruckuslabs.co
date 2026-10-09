@@ -2,9 +2,16 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["HF4N9F3P5Q.com.ruckuslabs.Somatic"],
+        "appIDs": [
+          "HF4N9F3P5Q.com.ruckuslabs.Somatic"
+        ],
         "components": [
-          { "/": "/somatic/template*" }
+          {
+            "/": "/somatic/template*"
+          },
+          {
+            "/": "/somatic/section*"
+          }
         ]
       }
     ]

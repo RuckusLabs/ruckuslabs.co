@@ -159,3 +159,6 @@ main {
     padding: 28px 24px;
   }
 }
+
+#open-btn[hidden] { display: none; }
+.hint a { text-decoration: underline; }

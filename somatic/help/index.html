@@ -26,7 +26,6 @@
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-128.png" sizes="128x128" />
 
   
 </head>
@@ -86,21 +85,21 @@
       <details class="faq-item">
         <summary>What is Somatic?</summary>
         <div class="faq-answer">
-          <p>Somatic is a personal fitness app for iPhone. Log strength workouts, track cardio with GPS, and get AI-powered session recommendations that adapt to your recovery, sleep, and training history.</p>
+          <p>Somatic is a strength and cardio tracker for iPhone. Log workouts, follow your history in Summary, and use Soma to plan a session around your completed work, preferences, available time, and check-in.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>What iPhone/iOS version do I need?</summary>
         <div class="faq-answer">
-          <p>Somatic requires iOS 26 or later.</p>
+          <p>Somatic requires iOS 26.2 or later. Apple Intelligence selection requires Apple Intelligence to be available on your device; local workout planning remains available without it.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Does Somatic work with Apple Watch?</summary>
         <div class="faq-answer">
-          <p>Heart rate data streams from Apple Watch during active sessions. An active workout session on your iPhone is required for Watch HR data to flow in — this is an Apple HealthKit requirement.</p>
+          <p>Somatic runs on iPhone and can read heart-rate samples available through Apple Health during a session. Apple Watch or supported heart-rate devices may supply those samples; availability and freshness depend on the device and Health permissions.</p>
         </div>
       </details>
 
@@ -127,14 +126,14 @@
       <details class="faq-item">
         <summary>How do I start a workout?</summary>
         <div class="faq-answer">
-          <p>Tap any session card on the home screen, or tap the "+" card to start a blank Strength or Cardio session.</p>
+          <p>Tap a session card on Sessions to open its launch flow, or use New Session to create a custom card. Use Soma when you want a suggested strength or cardio session.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Can I create custom session cards?</summary>
         <div class="faq-answer">
-          <p>Yes. Tap the gear icon on the Sessions tab → "Add Session Card." You can link a card to a saved Routine and give it a custom name and icon.</p>
+          <p>Yes. Use New Session on the Sessions screen. Give the card a name and icon, choose its type, and optionally link it to a saved routine.</p>
         </div>
       </details>
 
@@ -148,14 +147,14 @@
       <details class="faq-item">
         <summary>Can I reorder session cards?</summary>
         <div class="faq-answer">
-          <p>Yes. Tap the gear icon → "Edit & Reorder" to drag cards into any order.</p>
+          <p>Yes. Long-press a card to rearrange it on Sessions, or tap the edit and reorder button (up/down arrows) to manage cards and sections.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How do supersets work?</summary>
         <div class="faq-answer">
-          <p>During a strength workout, tap the superset button on any exercise card to pair it with an adjacent exercise. Paired exercises share the same glass card and alternate as you complete sets.</p>
+          <p>During a strength workout, use the movement controls to pair movements into a superset. Paired movements share a card. Soma can also suggest a compatible superset addition during a session.</p>
         </div>
       </details>
 
@@ -169,7 +168,7 @@
       <details class="faq-item">
         <summary>Can I use the rest timer from my Lock Screen?</summary>
         <div class="faq-answer">
-          <p>Yes. A Live Activity appears on your Lock Screen and Dynamic Island during active strength sessions. You can start/stop the rest timer directly from there without unlocking your phone.</p>
+          <p>Yes. Strength Live Activities show the current movement and set, with controls for logging, rest, and timed sets. Available controls change with the workout state. Live Activities also appear in Dynamic Island on supported iPhones.</p>
         </div>
       </details>
 
@@ -224,7 +223,7 @@
       <details class="faq-item">
         <summary>Does cardio use Live Activities?</summary>
         <div class="faq-answer">
-          <p>No. The Live Activity is only active during strength sessions.</p>
+          <p>Yes. Cardio Live Activities show elapsed time and your selected metrics, with pause and resume controls on the Lock Screen. Dynamic Island is supported on compatible iPhones.</p>
         </div>
       </details>
 
@@ -237,28 +236,28 @@
       <details class="faq-item">
         <summary>What is Soma?</summary>
         <div class="faq-answer">
-          <p>Soma is the built-in AI coach. It reads your recent training history, sleep, and recovery signals from Apple Health, then walks you through a guided flow to generate a personalized workout recommendation.</p>
+          <p>Soma is the built-in session planner. It considers completed training, comparable performance, reported effort and soreness, your preferences, and available Apple Health context. Apple Intelligence can select among locally validated strength plans when available.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How does the Soma flow work?</summary>
         <div class="faq-answer">
-          <p>It's a four-step wizard: Readiness (reviews your recovery) → Intent (Recover / Maintain / Push) → Tailor (adjust focus areas and equipment) → Generated Session (a ready-to-start workout). You can swap individual exercises or chat to reshape the plan before starting.</p>
+          <p>Review your readiness context and optional soreness check-in, choose Recover, Maintain, or Push, then tailor your workout type, time, equipment, and focus. Review the suggested session, swap movements or change the cardio activity, regenerate, or start.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Does Soma require an internet connection?</summary>
         <div class="faq-answer">
-          <p>No. Soma runs entirely on-device using Apple's FoundationModels framework. No data leaves your phone.</p>
+          <p>No. Workout planning and Apple Intelligence selection happen on-device. Apple Intelligence must already be available on your device; if it is unavailable or selection fails, Soma uses local planning.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How does Soma choose which exercises to recommend?</summary>
         <div class="faq-answer">
-          <p>It uses a rule-based cascade: fatigue detection → frequency imbalance → stale muscle groups → goal-based fallback. It respects your excluded muscle groups, excluded equipment, and excluded exercises from Settings.</p>
+          <p>The local planner checks your exclusions, reported soreness, selected equipment and focus, completed muscle work, historical training volume, comparable performance, and time budget. Recent demanding cardio can influence the next strength suggestion. Apple Intelligence selects among validated strength options; it does not invent weights or exercise prescriptions.</p>
         </div>
       </details>
 
@@ -272,7 +271,7 @@
       <details class="faq-item">
         <summary>What is the training phase system?</summary>
         <div class="faq-answer">
-          <p>Soma follows a 4-week periodization block: accumulation weeks 1–3 (progressive overload) and a deload week 4. Rep ranges and intensity targets adjust automatically across the cycle.</p>
+          <p>Training phases describe your recent training; they do not force a deload every fourth week. Soma may suggest easier work when repeated comparable performance changes and hard effort reports support it. You can choose a different intent while retaining your exclusions.</p>
         </div>
       </details>
 
@@ -305,21 +304,21 @@
       <details class="faq-item">
         <summary>What is a Session Template?</summary>
         <div class="faq-answer">
-          <p>A shareable file (.somatictemplate) that captures a complete workout prescription — exercises, sets, reps, and equipment. You can send it to a friend or import one from a coach.</p>
+          <p>A shareable workout prescription containing movements, sets, reps or durations, and equipment. Somatic shares templates as links rather than .somatictemplate files.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How do I share a session?</summary>
         <div class="faq-answer">
-          <p>Open any completed session in your history, tap the share button, and choose "Share as Template." The file can be sent via Messages, Mail, AirDrop, or any app.</p>
+          <p>Open a completed session in Summary and use its share control to share a template link through Messages, Mail, AirDrop, or another app. The link includes the workout prescription you choose to share.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>How do I import a template?</summary>
         <div class="faq-answer">
-          <p>Tap the .somatictemplate file from Files, Messages, or anywhere on iOS. Somatic opens an import confirmation screen showing the exercises, and you can tap "Start Session" to begin immediately.</p>
+          <p>Tap a shared Somatic link on your iPhone. Somatic shows an import preview so you can review the movements before starting. If the app is not installed, the link opens a webpage with an App Store link.</p>
         </div>
       </details>
 
@@ -332,14 +331,14 @@
       <details class="faq-item">
         <summary>Where can I see my workout history?</summary>
         <div class="faq-answer">
-          <p>The Movements tab (middle tab) shows your full session history. Tap any session for a detailed breakdown including sets, reps, and heart rate.</p>
+          <p>Open Summary, the middle tab, for your session history. Tap a session to see its completed work, stats, and available heart-rate timeline. Movements is the exercise library and routines tab.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>What stats are shown on the dashboard?</summary>
         <div class="faq-answer">
-          <p>You can pin up to 4 stats: This Week, This Month, Current Streak, Weekly Volume, Weekly Miles, Average Weekly Pace, Average Weekly Distance, and Personal Records. Customize them in Settings.</p>
+          <p>Summary shows rolling highlights such as Last 7 Days, Last 30 Days, streak, seven-day volume and distance, average weekly pace and distance, and personal records. Choose and reorder highlights in Settings; there is no four-highlight limit. You can also hide them all.</p>
         </div>
       </details>
 
@@ -359,14 +358,14 @@
       <details class="faq-item">
         <summary>Where is my data stored?</summary>
         <div class="faq-answer">
-          <p>Everything stays on your device. Somatic uses SwiftData (Apple's local database) and does not sync to any external server.</p>
+          <p>Your training database is stored locally on your iPhone. There is no account or automatic sync to a Somatic server. Data can leave the device when you choose to share a template or section link, export a backup, or save completed workouts to Apple Health. See the <a href="/somatic/privacy/">Privacy Policy</a> for details.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>Can I export my data?</summary>
         <div class="faq-answer">
-          <p>Yes. Settings → Data → Export Your Data generates a JSON file with your full workout history, profile, routines, and custom exercises. You can save it to Files or share it anywhere.</p>
+          <p>Yes. Settings → Data → Export Your Data creates a compressed JSON backup (.json.gz) containing your workout history, profile, routines, custom movements, and other saved training data. Save it to Files or share it with a destination you choose.</p>
         </div>
       </details>
 
@@ -447,9 +446,29 @@
 
     </div>
 
+    <h2>Training controls</h2>
+    <div class="faq-section">
+      <details class="faq-item"><summary>How do timed sets work?</summary><div class="faq-answer"><p>Switch a movement to time-based logging when you want to record duration instead of reps. Timed sets and rest have separate controls, including in the strength Live Activity.</p></div></details>
+      <details class="faq-item"><summary>What happens if the app is interrupted?</summary><div class="faq-answer"><p>Somatic offers recovery for an interrupted active workout. Strength uses saved elapsed-time checkpoints. Recovered cardio starts paused; resume it when you are ready to track again. Time the app could not observe is not inferred.</p></div></details>
+      <details class="faq-item"><summary>Does outdoor cardio pause automatically?</summary><div class="faq-answer"><p>Outdoor GPS sessions can pause tracking when you stop and resume when movement is detected. Optional auto-pause notifications can alert you while the screen is locked. Turning those alerts off does not disable automatic pause and resume.</p></div></details>
+    </div>
+
+    <h2>Soma and movement details</h2>
+    <div class="faq-section">
+      <details class="faq-item"><summary>What does the readiness estimate mean?</summary><div class="faq-answer"><p>It is a display-only estimate from available training and Health observations, not a measurement of recovery, injury risk, or permission to train harder. The numeric display does not drive the planner. Limited data may show “Learning your baseline.” Use your check-in and chosen intent to reflect how you feel.</p></div></details>
+      <details class="faq-item"><summary>What does “Soma suggested” mean?</summary><div class="faq-answer"><p>That label identifies a suggestion successfully selected using Apple Intelligence. Local planner output remains available when Apple Intelligence is unavailable and does not receive that label.</p></div></details>
+      <details class="faq-item"><summary>Can I keep notes for a movement?</summary><div class="faq-answer"><p>Yes. Movement notes stay with the movement across sessions. Movement details also include instructions and, where available, demonstration links and muscle information.</p></div></details>
+    </div>
+
+    <h2>Section sharing</h2>
+    <div class="faq-section">
+      <details class="faq-item"><summary>Can I share a whole section?</summary><div class="faq-answer"><p>Yes. Open edit and reorder on Sessions, open a named section’s options, and choose Share Section. The link includes the section and its cards, including linked workout prescriptions where present.</p></div></details>
+      <details class="faq-item"><summary>Who can read a shared link?</summary><div class="faq-answer"><p>Anyone with the link may be able to view or import its prescription. The encoded payload is part of the URL, not encrypted. Share only workout information you want recipients to have. See the <a href="/somatic/privacy/">Privacy Policy</a>.</p></div></details>
+    </div>
+
     <!-- Contact -->
     <div class="faq-contact">
-      <h2>Still have a question?</h2>
+    <h2>Still have a question?</h2>
       <p>Reach out and we'll get back to you as soon as we can.</p>
       <p><a href="mailto:support@ruckuslabs.co">support@ruckuslabs.co</a></p>
     </div>
