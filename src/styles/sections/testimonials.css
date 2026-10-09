@@ -97,6 +97,9 @@
   opacity: 1;
   transform-origin: left;
   border-radius: inherit;
+}
+
+.testimonial.is-rotating .dot.active::after {
   animation: dotFill var(--duration, 6s) linear forwards;
 }
 
