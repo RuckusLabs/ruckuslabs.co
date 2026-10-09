@@ -13,7 +13,6 @@ export function activateTestimonial(index) {
   items.forEach((item, i) => item.classList.toggle('active', i === index));
 
   dots.forEach((dot, i) => {
-    const wasActive = dot.classList.contains('active');
     dot.classList.toggle('active', i === index);
     dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
 
@@ -32,6 +31,7 @@ export function activateTestimonial(index) {
 
 export function goToTestimonial(index) {
   clearTimeout(testimonialTimer);
+  document.querySelector('.testimonial')?.classList.add('is-rotating');
   activateTestimonial(index);
   scheduleNext();
 }
@@ -46,16 +46,23 @@ function scheduleNext() {
 }
 
 export function initTestimonials() {
+  const section = document.querySelector('.testimonial');
   const dots = document.querySelectorAll('.dot');
-  if (!dots.length) return;
+  if (!section || !dots.length) return;
 
   dots.forEach((dot) => {
     dot.addEventListener('click', () => goToTestimonial(parseInt(dot.dataset.index)));
   });
 
-  // Seed the first dot's timer fill
-  const firstDot = dots[0];
-  firstDot.style.setProperty('--duration', `${TESTIMONIAL_DURATION}ms`);
+  // Give the first quote its full reading time when the section comes into view.
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    observer.disconnect();
+    if (section.classList.contains('is-rotating')) return;
+    section.classList.add('is-rotating');
+    activateTestimonial(testimonialIndex);
+    scheduleNext();
+  }, { threshold: 0.25 });
 
-  scheduleNext();
+  observer.observe(section);
 }
