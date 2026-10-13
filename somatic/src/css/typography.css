@@ -62,3 +62,6 @@ p {
 a {
   color: var(--color-text);
 }
+
+/* Product availability details sit below the main story. */
+.product-note { max-width: 780px; margin: 28px auto 0; padding: 0 24px; font-size: 12px; line-height: 1.5; letter-spacing: 0; color: var(--color-text-muted); text-align: center; }
