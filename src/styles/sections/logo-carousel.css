@@ -12,14 +12,15 @@
 }
 
 .logo-carousel {
-  min-height: 52px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-slide {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 100px));
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -63,15 +64,21 @@
 
 .logo-img {
   height: 100px;
-  width: auto;
+  width: 100%;
+  min-width: 0;
   object-fit: contain;
   filter: var(--logo-filter);
   opacity: var(--logo-opacity);
-  transition: opacity 0.2s ease;
   flex-shrink: 0;
   will-change: opacity, transform;
 }
 
 .logo-img:hover {
   opacity: 0.7;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-slide.slide-out .logo-img,
+  .logo-slide.slide-in .logo-img {
+    animation: none;
+  }
 }

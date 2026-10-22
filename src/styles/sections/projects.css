@@ -85,3 +85,8 @@
 .project-row:hover .project-open {
   opacity: 1;
 }
+.project-row,
+.archive-row {
+  text-decoration: none;
+  color: inherit;
+}
