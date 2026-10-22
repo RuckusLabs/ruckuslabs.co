@@ -1,0 +1,66 @@
+.project-page {
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.project-back,
+.project-page-footer a {
+  color: var(--muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.project-page-header {
+  margin-top: 40px;
+}
+
+.project-page-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.project-page-title {
+  font-family: var(--font);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+}
+
+.project-page .modal-section-heading {
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.project-page .modal-tag {
+  line-height: 1.6;
+}
+
+.project-visit {
+  margin-top: 24px;
+}
+
+.project-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-page-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--divider);
+}

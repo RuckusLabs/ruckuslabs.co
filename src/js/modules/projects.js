@@ -1,6 +1,6 @@
 // Project Data and Modal Module
 
-const PROJECTS = {
+export const PROJECTS = {
   apple: {
     name: 'Apple',
     tag: 'Web Development',
@@ -456,16 +456,18 @@ function buildSection({ heading, body, images }) {
   div.className = 'modal-section';
 
   if (heading) {
-    const h = document.createElement('p');
+    const h = document.createElement('h3');
     h.className = 'modal-section-heading';
     h.textContent = heading;
     div.appendChild(h);
   }
 
-  const p = document.createElement('p');
-  p.className = 'modal-section-body';
-  p.textContent = body;
-  div.appendChild(p);
+  if (body) {
+    const p = document.createElement('p');
+    p.className = 'modal-section-body';
+    p.textContent = body;
+    div.appendChild(p);
+  }
 
   if (images && images.length) {
     const grid = document.createElement('div');
@@ -540,6 +542,7 @@ export function openModal(slug) {
     logoImg.style.filter = data.logoFilter !== undefined ? data.logoFilter : '';
   }
 
+  el.modal.querySelector('.modal-permalink').href = `/work/${slug}/`;
   titleEl.textContent = data.name;
   tagEl.textContent = data.tag;
   descEl.textContent = data.description;
@@ -605,9 +608,13 @@ export function initModal() {
 
   // Open on project row click (latest + archives)
   document.querySelectorAll('.project-row, .archive-row').forEach((row) => {
-    row.addEventListener('click', () => openModal(row.dataset.project));
+    row.addEventListener('click', (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openModal(row.dataset.project);
+    });
     row.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      if (row.tagName !== 'A' && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         openModal(row.dataset.project);
       }

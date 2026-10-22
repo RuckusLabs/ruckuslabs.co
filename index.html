@@ -8,7 +8,6 @@
   <link rel="preload" href="./src/fonts/OakesGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <title>Ruckus Labs | Digital products built for context.</title>
   <meta name="description" content="Ruckus Labs is a design and development studio with particular tastes. Identity, websites, and software, carried from the first design decision to the finished product.">
-  <meta name="keywords" content="digital design studio, web design, web development, brand identity, design systems, UI UX, product design, Trace app, Somatic app, Ruckus Labs">
   <meta name="author" content="Ruckus Labs">
   <link rel="canonical" href="https://ruckuslabs.co/">
 
@@ -18,6 +17,8 @@
   <meta property="og:title" content="Ruckus Labs | Digital products built for context.">
   <meta property="og:description" content="Ruckus Labs is a design and development studio with particular tastes. Identity, websites, and software, carried from the first design decision to the finished product.">
   <meta property="og:image" content="https://ruckuslabs.co/src/images/og-image.png">
+  <meta property="og:image:width" content="1800">
+  <meta property="og:image:height" content="1100">
   <meta property="og:image:alt" content="Ruckus Labs — Digital products built for context.">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -36,19 +37,13 @@
         "url": "https://ruckuslabs.co"
       },
       {
-        "@type": "ProfessionalService",
+        "@type": "Organization",
         "@id": "https://ruckuslabs.co/#organization",
         "name": "Ruckus Labs",
         "url": "https://ruckuslabs.co",
         "logo": "https://ruckuslabs.co/src/images/common/ruckus-labs-logo.svg",
         "description": "Design and development for brands, websites, and software. Built for the business, the device, and the person using it.",
         "email": "hello@ruckuslabs.co",
-        "priceRange": "$$$",
-        "sameAs": [
-          "https://ruckuslabs.co/trace",
-          "https://ruckuslabs.co/somatic",
-          "https://makki.pro"
-        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Services",
@@ -109,13 +104,13 @@
   <header class="site-header">
     <img src="./src/images/common/ruckus-labs-logo.svg" alt="Ruckus Labs" class="site-logo">
     <h1>Digital products <span class="highlight">built for context.</span></h1>
-    <h2 class="mobile-padding-10 desktop-padding-7">A product has to make sense somewhere: in a business, on a device, in someone's day. We design for those conditions, down to the last detail.</h2>
+    <p class="site-intro mobile-padding-10 desktop-padding-7">A product has to make sense somewhere: in a business, on a device, in someone's day. We design for those conditions, down to the last detail.</p>
   </header>
 
   <section class="logo-carousel-section">
     <p class="carousel-label">Ruckus Labs has worked with:</p>
     <div class="logo-carousel">
-      <div class="logo-slide" aria-live="polite">
+      <div class="logo-slide">
         <!-- Populated by JS -->
       </div>
     </div>
@@ -126,26 +121,26 @@
     <p>AI is part of how we build. It shortens the distance between a design decision and something we can use, inspect, and revise. We spend the time it saves on the details.</p>
 
     <div class="services-list">
-      <details class="service-item">
-        <summary class="service-summary">Brand Identity & Narrative<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+      <details class="service-item" open>
+        <summary class="service-summary"><span class="service-title"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9Z"/><path d="m8 12 4 4 4-4-4-4Z"/></svg><span>Brand Identity & Narrative</span></span><svg class="service-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
         <div class="service-body">
           <p class="service-desc">We give a brand its vocabulary: type, color, imagery, and language. The interesting part is deciding what belongs. A good identity makes those decisions recognizable across everything you put into the world.</p>
         </div>
       </details>
-      <details class="service-item">
-        <summary class="service-summary">Digital Design &amp; Development<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+      <details class="service-item" open>
+        <summary class="service-summary"><span class="service-title"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg><span>Digital Design &amp; Development</span></span><svg class="service-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
         <div class="service-body">
           <p class="service-desc">We design and build the same product. Typography, transitions, loading states, and the awkward edge cases all stay within our remit, through deployment.</p>
         </div>
       </details>
-      <details class="service-item">
-        <summary class="service-summary">Web &amp; Product Design<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+      <details class="service-item" open>
+        <summary class="service-summary"><span class="service-title"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18m-11 0v11"/></svg><span>Web &amp; Product Design</span></span><svg class="service-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
         <div class="service-body">
           <p class="service-desc">A checkout, a course catalog, and a professional tool ask different things of an interface. We start with what someone came to do, then work through the hierarchy, pacing, and details that make it legible.</p>
         </div>
       </details>
-      <details class="service-item">
-        <summary class="service-summary">Design Systems<svg class="service-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
+      <details class="service-item" open>
+        <summary class="service-summary"><span class="service-title"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Design Systems</span></span><svg class="service-chevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><polyline points="9 18 15 12 9 6" /></svg></summary>
         <div class="service-body">
           <p class="service-desc">A design system records a product's judgment: how type behaves, where space belongs, what a component does. We build systems that give the next person enough direction to extend the work well.</p>
         </div>
@@ -153,10 +148,10 @@
     </div>
   </section>
 
-  <section class="projects">
-    <h3 class="section-label">Latest projects</h3>
+  <section class="projects" id="work">
+    <h2 class="section-label">Latest projects</h2>
 
-    <div class="project-row" data-project="somatic" role="button" tabindex="0" aria-label="Somatic project">
+    <a class="project-row" data-project="somatic" aria-label="Somatic project" href="/work/somatic/">
       <img src="./src/images/logos/somatic-mini.svg" alt="" class="project-thumb">
       <div class="project-info">
         <span class="project-name">Somatic</span>
@@ -167,9 +162,9 @@
           <line x1="12" y1="8" x2="12" y2="16" />
           <line x1="8" y1="12" x2="16" y2="12" />
         </svg></span>
-    </div>
+    </a>
 
-    <div class="project-row" data-project="trace" role="button" tabindex="0" aria-label="Trace project">
+    <a class="project-row" data-project="trace" aria-label="Trace project" href="/work/trace/">
       <img src="./src/images/logos/trace-mini.svg" alt="" class="project-thumb">
       <div class="project-info">
         <span class="project-name">Trace</span>
@@ -180,9 +175,9 @@
           <line x1="12" y1="8" x2="12" y2="16" />
           <line x1="8" y1="12" x2="16" y2="12" />
         </svg></span>
-    </div>
+    </a>
 
-    <div class="project-row" data-project="schvitzin" role="button" tabindex="0" aria-label="Schvitzin' project">
+    <a class="project-row" data-project="schvitzin" aria-label="Schvitzin' project" href="/work/schvitzin/">
       <img src="./src/images/logos/schvitzin-mini.svg" alt="" class="project-thumb">
       <div class="project-info">
         <span class="project-name">Schvitzin'</span>
@@ -193,163 +188,163 @@
           <line x1="12" y1="8" x2="12" y2="16" />
           <line x1="8" y1="12" x2="16" y2="12" />
         </svg></span>
-    </div>
+    </a>
   </section>
 
   <section class="archives">
-    <h3 class="section-label">From the archives</h3>
+    <h2 class="section-label">From the archives</h2>
 
-    <div class="archive-row" data-project="job-boardly" role="button" tabindex="0" aria-label="Job Boardly project">
+    <a class="archive-row" data-project="job-boardly" aria-label="Job Boardly project" href="/work/job-boardly/">
       <img src="./src/images/logos/jb-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Job Boardly</span>
       <span class="archive-tags">Brand Identity, Web Design</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2024</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="little-herb-places" role="button" tabindex="0" aria-label="Little Herb Places project">
+    <a class="archive-row" data-project="little-herb-places" aria-label="Little Herb Places project" href="/work/little-herb-places/">
       <img src="./src/images/logos/little-herb-places-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Little Herb Places</span>
       <span class="archive-tags">Brand Identity, Narrative, Web Design</span>
       <span class="archive-year">2024</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="get-outdoor-jobs" role="button" tabindex="0" aria-label="Get Outdoor Jobs project">
+    <a class="archive-row" data-project="get-outdoor-jobs" aria-label="Get Outdoor Jobs project" href="/work/get-outdoor-jobs/">
       <img src="./src/images/logos/get-outdoor-jobs-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Get Outdoor Jobs</span>
       <span class="archive-tags">Brand Identity</span>
       <span class="archive-year">2023</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="glamping-on-wine" role="button" tabindex="0" aria-label="Glamping on Wine project">
+    <a class="archive-row" data-project="glamping-on-wine" aria-label="Glamping on Wine project" href="/work/glamping-on-wine/">
       <img src="./src/images/logos/glamping-on-wine-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Glamping on Wine</span>
       <span class="archive-tags">Brand Identity, Narrative, Web Design</span>
       <span class="archive-year">2022</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="apple" role="button" tabindex="0" aria-label="Apple project">
+    <a class="archive-row" data-project="apple" aria-label="Apple project" href="/work/apple/">
       <img src="./src/images/logos/apple-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Apple</span>
       <span class="archive-tags">Web Development</span>
       <span class="archive-year">2022</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="welcome" role="button" tabindex="0" aria-label="Welcome project">
+    <a class="archive-row" data-project="welcome" aria-label="Welcome project" href="/work/welcome/">
       <img src="./src/images/logos/welcome-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Welcome</span>
       <span class="archive-tags">Product Design</span>
       <span class="archive-year">2021</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="old-landing" role="button" tabindex="0" aria-label="Old Landing project">
+    <a class="archive-row" data-project="old-landing" aria-label="Old Landing project" href="/work/old-landing/">
       <img src="./src/images/logos/old-landing-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Old Landing</span>
       <span class="archive-tags">Brand Identity, Narrative</span>
       <span class="archive-year">2021</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="journey" role="button" tabindex="0" aria-label="Journey project">
+    <a class="archive-row" data-project="journey" aria-label="Journey project" href="/work/journey/">
       <img src="./src/images/logos/journey-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Journey</span>
       <span class="archive-tags">Product Design</span>
       <span class="archive-year">2021</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="molo" role="button" tabindex="0" aria-label="Molo project">
+    <a class="archive-row" data-project="molo" aria-label="Molo project" href="/work/molo/">
       <img src="./src/images/logos/molo-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Molo</span>
       <span class="archive-tags">Brand Identity, Narrative, Design System</span>
       <span class="archive-year">2020</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="transaccts" role="button" tabindex="0" aria-label="Transaccts project">
+    <a class="archive-row" data-project="transaccts" aria-label="Transaccts project" href="/work/transaccts/">
       <img src="./src/images/logos/transaccts-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Transaccts</span>
       <span class="archive-tags">Web Development, Design System</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2019</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="ptc" role="button" tabindex="0" aria-label="PTC project">
+    <a class="archive-row" data-project="ptc" aria-label="PTC project" href="/work/ptc/">
       <img src="./src/images/logos/pct-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Vuforia</span>
       <span class="archive-tags">AR Design and Development</span>
       <span class="archive-year">2018</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="f45" role="button" tabindex="0" aria-label="f45 project">
+    <a class="archive-row" data-project="f45" aria-label="f45 project" href="/work/f45/">
       <img src="./src/images/logos/f45-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">F45</span>
       <span class="archive-tags">Digital Design</span>
       <span class="archive-year">2018</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="chicory" role="button" tabindex="0" aria-label="chicory project">
+    <a class="archive-row" data-project="chicory" aria-label="chicory project" href="/work/chicory/">
       <img src="./src/images/logos/chicory-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Chicory</span>
       <span class="archive-tags">Brand Identity, Narrative, Web Development, Product Design</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2017</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="very-cool-weekly" role="button" tabindex="0" aria-label="very-cool-weekly project">
+    <a class="archive-row" data-project="very-cool-weekly" aria-label="very-cool-weekly project" href="/work/very-cool-weekly/">
       <img src="./src/images/logos/very-cool-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Very Cool Weekly</span>
       <span class="archive-tags">Brand Identity, Digital Design, Web Development</span>
       <span class="archive-year">2017</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="otf" role="button" tabindex="0" aria-label="Orangetheory Fitness project">
+    <a class="archive-row" data-project="otf" aria-label="Orangetheory Fitness project" href="/work/otf/">
       <img src="./src/images/logos/otf-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Orangetheory Fitness</span>
       <span class="archive-tags">Digital Design</span>
       <span class="archive-year">2016</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="lawline-app" role="button" tabindex="0" aria-label="Lawline iOS and Android project">
+    <a class="archive-row" data-project="lawline-app" aria-label="Lawline iOS and Android project" href="/work/lawline-app/">
       <img src="./src/images/logos/lawline-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Lawline iOS & Android</span>
       <span class="archive-tags">Digital Development, Product Design, Design System</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2015</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="neso" role="button" tabindex="0" aria-label="neso project">
+    <a class="archive-row" data-project="neso" aria-label="neso project" href="/work/neso/">
       <img src="./src/images/logos/neso-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">neso</span>
       <span class="archive-tags">Brand Identity, Narrative</span>
       <span class="archive-year">2014</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="lawline" role="button" tabindex="0" aria-label="Lawline project">
+    <a class="archive-row" data-project="lawline" aria-label="Lawline project" href="/work/lawline/">
       <img src="./src/images/logos/lawline-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Lawline</span>
       <span class="archive-tags">Digital Development, Product Design, Design System</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2013</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="sourced" role="button" tabindex="0" aria-label="Sourced Adventures project">
+    <a class="archive-row" data-project="sourced" aria-label="Sourced Adventures project" href="/work/sourced/">
       <img src="./src/images/logos/sourced-adventures-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Sourced Adventures</span>
       <span class="archive-tags">Brand Identity, Narrative, Product Design</span>
       <span class="archive-case-study">Case Study</span>
       <span class="archive-year">2013</span>
-    </div>
+    </a>
 
-    <div class="archive-row" data-project="avion" role="button" tabindex="0" aria-label="Avion project">
+    <a class="archive-row" data-project="avion" aria-label="Avion project" href="/work/avion/">
       <img src="./src/images/logos/tequila-avion-mini.svg" alt="" class="archive-thumb">
       <span class="archive-name">Tequila Avion</span>
       <span class="archive-tags">Web Development</span>
       <span class="archive-year">2013</span>
-    </div>
+    </a>
 
     <div class="archives-fade" aria-hidden="true"></div>
   </section>
 
   <section class="pricing">
-    <h3 class="section-label">Pricing</h3>
+    <h2 class="section-label">Pricing</h2>
     <div class="pricing-grid">
 
       <div class="pricing-card">
@@ -421,18 +416,19 @@
   <!-- Modal -->
   <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-backdrop"></div>
-    <div class="modal-inner">
+    <div class="modal-inner" tabindex="-1">
       <button class="modal-close" aria-label="Close">&times;</button>
       <div class="modal-hero-wrap">
         <img class="modal-hero" src="" alt="">
       </div>
       <img class="modal-logo" src="" alt="">
-      <h3 class="modal-title" id="modal-title"></h3>
+      <h2 class="modal-title" id="modal-title"></h2>
       <p class="modal-tag"></p>
       <p class="modal-description"></p>
       <a class="modal-link" target="_blank" rel="noopener noreferrer"></a>
       <div class="modal-sections"></div>
       <div class="modal-images"></div>
+      <a class="modal-permalink" href="/">View full project →</a>
     </div>
   </div>
 
