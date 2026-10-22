@@ -105,7 +105,7 @@ One or two well-placed references do more than a footnote on every paragraph. Th
 Keep it minimal. No hard sell. The post has already done the work.
 
 ```
-*No subscription. Your data never leaves your iPhone.* [Join the beta via TestFlight.](https://testflight.apple.com/join/CVT6dz4U)
+*No subscription. Private by default. No account required.* [Get Somatic on the App Store.](https://apps.apple.com/us/app/somatic-train-with-your-body/id6773419219)
 ```
 
 Italic for the trust line. Linked text for the action. One sentence total.
@@ -121,3 +121,6 @@ Before you post, read it back and ask:
 - Does Somatic/Soma appear more than twice?
 - Are there any sentences that exist just to transition? (Delete them.)
 - Would a smart, tired person keep reading after the first paragraph?
+## Product-page copy
+
+Lead with the benefit. Give each feature one short headline and one concrete explanation. Use a little rhythm or wordplay when it comes naturally. Keep claims specific to what the app does today. Place compatibility and readiness qualifications below the main story, and keep Help and legal pages direct. Product pages should feel calm, capable, and easy to scan. Preserve Somatic's own language rather than repeating another brand's slogans.

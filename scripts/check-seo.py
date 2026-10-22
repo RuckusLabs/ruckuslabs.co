@@ -64,7 +64,7 @@ def local_path(url, source):
 pages = [ROOT / 'index.html']
 for directory in ('work', 'somatic', 'trace'):
     pages.extend(sorted((ROOT / directory).rglob('*.html')))
-canonicals, titles = set(), set()
+canonicals, titles, indexable = set(), set(), set()
 errors = []
 for source in pages:
     try:
@@ -80,6 +80,8 @@ for source in pages:
         assert canonical == expected, f'Canonical mismatch: {canonical} != {expected}'
         assert canonical not in canonicals, 'Duplicate canonical'
         canonicals.add(canonical)
+        if 'noindex' not in (page.meta.get('robots') or '').lower().replace(',', ' ').split():
+            indexable.add(canonical)
         for ref in page.references + [page.meta.get('og:image', ''), page.meta.get('twitter:image', '')]:
             target = local_path(ref, source)
             assert target is None or target.exists(), f'Broken local reference: {ref}'
@@ -94,7 +96,7 @@ assert not errors, '\n'.join(errors)
 sitemap = ET.parse(ROOT / 'sitemap.xml')
 urls = [node.text for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 assert len(urls) == len(set(urls)), 'Duplicate sitemap URLs'
-assert set(urls) == canonicals, 'Sitemap does not match public canonical pages'
+assert set(urls) == indexable, 'Sitemap does not match indexable canonical pages'
 assert f'Sitemap: {ORIGIN}/sitemap.xml' in (ROOT / 'robots.txt').read_text()
 assert (ROOT / 'robots.txt').read_text() == (ROOT / 'static/robots.txt').read_text()
 print(f'Passed: {len(pages)} pages, unique titles and canonicals, H1s, descriptions, local assets/links, social URLs, JSON-LD, sitemap, and robots.txt.')
