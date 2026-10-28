@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>One rep. Every session. That's the plan.</title>
-  <link rel="canonical" href="https://ruckuslabs.co/somatic/blog/one-rep-every-session/" />
   <meta name="description" content="Progressive overload is the most important variable in strength training. Here's what it actually means in practice — and why most people apply it wrong." />
   
   <meta name="author" content="Ruckus Labs" />
@@ -26,7 +25,7 @@
   <meta property="og:title" content="One rep. Every session. That's the plan." />
   <meta property="og:description" content="Progressive overload is the most important variable in strength training. Here's what it actually means in practice — and why most people apply it wrong." />
   
-  <meta property="og:image" content="https://ruckuslabs.co/somatic/src/images/social/og-preview.png" />
+  <meta property="og:image" content="/somatic/src/images/social/og-blog-default.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   
@@ -34,14 +33,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="One rep. Every session. That's the plan." />
   <meta name="twitter:description" content="Progressive overload is the most important variable in strength training. Here's what it actually means in practice — and why most people apply it wrong." />
-  <meta name="twitter:image" content="https://ruckuslabs.co/somatic/src/images/social/og-preview.png" />
+  <meta name="twitter:image" content="/somatic/src/images/social/og-blog-default.jpg" />
   
   
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/somatic/src/css/index.css" />
+  <link rel="stylesheet" href="/somatic/src/css/index.css?v=20261027-spacing19" />
   <link rel="stylesheet" href="/somatic/src/css/blog.css" />
   
 
@@ -50,6 +49,7 @@
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-128.png" sizes="128x128" />
 
   
 </head>
@@ -113,7 +113,7 @@
       <p class="post-description">Progressive overload is the most important variable in strength training. Here's what it actually means in practice — and why most people apply it wrong.</p>
     </header>
 
-    <div class="post-body"><p class="post-update"><em>Product details updated October 12, 2026.</em></p><h2 id="the-simplest-progressive-overload-plan-youll-ever-run">The Simplest Progressive Overload Plan You’ll Ever Run</h2>
+    <div class="post-body"><h2 id="the-simplest-progressive-overload-plan-youll-ever-run">The Simplest Progressive Overload Plan You’ll Ever Run</h2>
 
 <p>You’ve been pressing 80kg for about six weeks. The sets don’t feel hard anymore. You’re not sure if you should go up. So you do 80kg again next session, and the session after that, and the one after that. Four months in, you’re still at 80kg. Not because you’re not working hard. Because you’ve been accidentally running a maintenance program.</p>
 
@@ -151,7 +151,7 @@
 
 <p>Memory is not a reliable training log. You will not remember exactly what weight you used for your third set of Romanian deadlifts six weeks ago. Your phone will. Tracking creates the data that makes overload systematic rather than approximate.</p>
 
-<p>Somatic keeps your movement history available and can suggest progression after repeated comparable sessions meet their saved targets, taking recorded effort into account. You can review and adjust the prescription before starting.</p>
+<p>Somatic automatically surfaces your last session’s weights and reps when you open an exercise, and flags when you’ve been consistently hitting the top of your rep range — signaling that a weight bump is warranted. The progression logic is built in.</p>
 
 <p><strong>Trust the trend, not the session</strong></p>
 
@@ -175,7 +175,7 @@ Week 5: 77.5kg again. Hits all 25 reps. Adds 2.5kg.</p>
 
 <p>One rep. Every session. For as long as you train.</p>
 
-<p><em>No subscription. Private by default. No account required.</em> <a href="https://apps.apple.com/us/app/somatic-train-with-your-body/id6773419219">Get Somatic on the App Store.</a></p>
+<p><em>No subscription. Your data never leaves your iPhone.</em> <a href="https://testflight.apple.com/join/CVT6dz4U">Join the beta via TestFlight.</a></p>
 
 <hr />
 
@@ -210,7 +210,7 @@ Week 5: 77.5kg again. Hits all 25 reps. Adds 2.5kg.</p>
   "datePublished": "2026-07-17T00:00:00+00:00",
   "author": { "@type": "Person", "name": "The Somatic Team" },
   "publisher": { "@type": "Organization", "name": "Somatic", "url": "https://ruckuslabs.co/somatic/" },
-  "url": "https://ruckuslabs.co/somatic/blog/one-rep-every-session/"
+  "url": "https://ruckuslabs.co/blog/one-rep-every-session/"
   
   
 }
@@ -262,6 +262,7 @@ Week 5: 77.5kg again. Hits all 25 reps. Adds 2.5kg.</p>
   </footer>
 
   <script>
+    document.documentElement.classList.add('js-animations');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -269,7 +270,7 @@ Week 5: 77.5kg again. Hits all 25 reps. Adds 2.5kg.</p>
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.50 });
+    }, { threshold: 0.12 });
 
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
