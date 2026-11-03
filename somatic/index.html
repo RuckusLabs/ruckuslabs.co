@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Somatic for iOS | Train with your body. Not against it.</title>
-  <meta name="description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. $3.99. No subscription." />
+  <meta name="description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. Try free for 14 days, then unlock for $14.99 once. No subscription." />
   <meta name="keywords" content="fitness app, iPhone workout tracker, Apple Health, strength training, meditation, cardio, Apple Intelligence, privacy-first fitness" />
   <meta name="author" content="Ruckus Labs" />
   <meta name="theme-color" content="#000000" />
@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Somatic" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Somatic for iOS | Train with your body. Not against it." />
-  <meta property="og:description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. $3.99. No subscription." />
+  <meta property="og:description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. Try free for 14 days, then unlock for $14.99 once. No subscription." />
   
   <meta property="og:image" content="https://ruckuslabs.co/somatic/src/images/social/og-preview.png" />
   <meta property="og:image:width" content="1200" />
@@ -28,7 +28,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Somatic — Train with your body. Not against it." />
-  <meta name="twitter:description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. $3.99. No subscription." />
+  <meta name="twitter:description" content="Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. Try free for 14 days, then unlock for $14.99 once. No subscription." />
   <meta name="twitter:image" content="https://ruckuslabs.co/somatic/src/images/social/og-preview.png" />
   <meta name="twitter:image:alt" content="Somatic app — holistic fitness for iPhone" />
   
@@ -36,8 +36,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/somatic/src/css/index.css?v=20261027-spacing19" />
-  
+  <link rel="stylesheet" href="/somatic/src/css/index.css?v=20261029-reveal3" />
+  <link rel="stylesheet" href="/somatic/src/css/purchase.css?v=20261029-3" />
   
 
   <link rel="apple-touch-icon" href="/somatic/src/images/favicon/favicon-196x196.png" />
@@ -45,7 +45,7 @@
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-128.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="/somatic/src/images/favicon/favicon-128x128.png" sizes="128x128" />
 
   <script type="application/ld+json">
 {
@@ -65,7 +65,7 @@
       "@type": "MobileApplication",
       "@id": "https://ruckuslabs.co/somatic#app",
       "name": "Somatic",
-      "description": "Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. $3.99. No subscription.",
+      "description": "Strength and cardio. Built around you. Track your workouts, plan with Soma, and see your progress. Private by default. Free 14-day trial, then $14.99 one-time unlock. No subscription.",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS 26.2+",
       "url": "https://ruckuslabs.co/somatic",
@@ -81,7 +81,8 @@
       ],
       "offers": {
         "@type": "Offer",
-        "price": "3.99",
+        "price": "0",
+        "description": "Free download with a 14-day full-app trial. Optional $14.99 USD one-time unlock to start new Sessions afterward; no automatic charge.",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
@@ -153,10 +154,13 @@
     <header class="hero" data-animate>
     <div class="hero-content" data-animate style="--anim-delay: 0.1s">
       <h1><span class="hero-headline-line">Train with your body.</span><span class="hero-headline-line">Not against it.</span></h1>
-      <h2>Train. Breathe. Make&nbsp;progress.</h2>
-      <a class="btn-appstore" href="https://apps.apple.com/us/app/somatic-train-with-your-body/id6773419219" data-animate style="--anim-delay: 0.2s">
-        <img src="src/images/landing/app-store-badge.svg" alt="Download on the App Store" />
-      </a>
+      <h2>Strength, cardio, and meditation. Together on&nbsp;iPhone.</h2>
+      <div class="hero-purchase" data-animate style="--anim-delay: 0.2s">
+        <a class="btn-appstore" href="https://apps.apple.com/us/app/somatic-train-with-your-body/id6773419219">
+          <img src="src/images/landing/app-store-badge.svg" alt="Download on the App Store" width="164" height="55" />
+        </a>
+        <p class="hero-price">14 days free. Then $14.99 once. No&nbsp;subscription.</p>
+      </div>
       <div class="hero-devices" data-animate style="--anim-delay: 0.3s" aria-label="Somatic: strength training, guided breathing, and outdoor running">
         <div class="hero-device hero-device-center">
 <div class="device">
@@ -164,7 +168,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/rest.webp?v=20261027-duo16" alt="Active strength Session with a running rest timer" width="1800" height="3680" fetchpriority="high" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-strength.mp4?v=20261027-sequence18&amp;view=active-strength-session-with-a-running-rest-timer" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-strength.mp4?v=20261029-playback5&amp;view=active-strength-session-with-a-running-rest-timer" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -177,7 +181,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/meditation.webp?v=20261027-duo16" alt="Guided breathing meditation with an animated breathing guide" width="1800" height="3680" fetchpriority="high" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-breathing.mp4?v=20261027-sequence18&amp;view=guided-breathing-meditation-with-an-animated-breathing-guide" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-breathing.mp4?v=20261029-playback5&amp;view=guided-breathing-meditation-with-an-animated-breathing-guide" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -190,7 +194,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/cardio.webp?v=20261027-duo16" alt="Outdoor run with heart-rate zones as the main metric, plus distance and pace" width="1800" height="3680" fetchpriority="high" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-cardio.mp4?v=20261027-sequence18&amp;view=outdoor-run-with-heart-rate-zones-as-the-main-metric-plus-distance-and-pace" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-cardio.mp4?v=20261029-playback5&amp;view=outdoor-run-with-heart-rate-zones-as-the-main-metric-plus-distance-and-pace" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -305,7 +309,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/cardio.webp?v=20261027-duo16" alt="Outdoor run with heart-rate zones as the main metric, plus distance and pace" width="1800" height="3680" loading="lazy" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-cardio.mp4?v=20261027-sequence18&amp;view=outdoor-run-with-heart-rate-zones-as-the-main-metric-plus-distance-and-pace" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-cardio.mp4?v=20261029-playback5&amp;view=outdoor-run-with-heart-rate-zones-as-the-main-metric-plus-distance-and-pace" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -323,7 +327,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/sessions-dark.webp?v=20261027-duo16" alt="Sessions in dark mode with the default blue Somatic Session card" width="1800" height="3680" loading="lazy" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-sessions-dark.mp4?v=20261027-sequence18&amp;view=sessions-in-dark-mode-with-the-default-blue-somatic-session-card" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-sessions-dark.mp4?v=20261029-playback5&amp;view=sessions-in-dark-mode-with-the-default-blue-somatic-session-card" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -336,7 +340,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/sessions.webp?v=20261027-duo16" alt="Sessions in light mode with the default blue Somatic Session card" width="1800" height="3680" loading="lazy" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-sessions-light.mp4?v=20261027-sequence18&amp;view=sessions-in-light-mode-with-the-default-blue-somatic-session-card" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-sessions-light.mp4?v=20261029-playback5&amp;view=sessions-in-light-mode-with-the-default-blue-somatic-session-card" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -354,7 +358,7 @@
     <img class="device-capture" src="/somatic/src/images/screens/meditation.webp?v=20261027-duo16" alt="Active breathing meditation with a visual guide, timer, and pause control" width="1800" height="3680" loading="lazy" decoding="sync" />
   </div>
   
-  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-breathing.mp4?v=20261027-sequence18&amp;view=active-breathing-meditation-with-a-visual-guide-timer-and-pause-control" aria-hidden="true" tabindex="-1"></video>
+  <video class="device-video" muted playsinline preload="none" data-src="/somatic/src/videos/hero-breathing.mp4?v=20261029-playback5&amp;view=active-breathing-meditation-with-a-visual-guide-timer-and-pause-control" aria-hidden="true" tabindex="-1"></video>
   <img class="device-video-frame" src="/somatic/src/images/devices/iphone-18-pro.webp" alt="" width="1800" height="3680" aria-hidden="true" />
   
   
@@ -482,14 +486,49 @@
     </div>
   </section>
   <script src="/somatic/src/js/feature-streams.js?v=20261027-polish6" defer></script>
-  <script src="/somatic/src/js/hero-scroll.js?v=20261027-motion14" defer></script>
+  <script src="/somatic/src/js/hero-scroll.js?v=20261029-playback4" defer></script>
+
+  <section class="purchase-faq" aria-labelledby="purchase-faq-title">
+    <h3 id="purchase-faq-title">A few things before you&nbsp;begin.</h3>
+    <div class="purchase-faq-list faq-list">
+      <details class="faq-card">
+        <summary>Does it require a subscription?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>No. Download Somatic free and start a 14-day trial of the full app. Afterward, unlock it for $14.99 USD with one in-app purchase. There is no automatic charge. Strength, cardio, and meditation are included; yoga will be included for purchasers when it arrives. Your local price is shown in the App Store.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>What happens after the trial?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>You can still browse, view your history, and export your data. Starting new Sessions requires the one-time unlock. A Session already in progress can be finished. The trial does not renew or charge you automatically.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>What if I already bought Somatic?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>You keep full access without paying again. If needed, open Settings → Account → Restore purchases using the Apple Account you originally used.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>Do I need Apple Intelligence?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>No. Workout tracking, meditation, and local Session planning work without it. On supported devices, Apple Intelligence can help Soma select among plans shaped by your training history and preferences.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>Do I need an Apple Watch?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>No. You can log strength workouts, track outdoor cardio with your iPhone’s GPS, and practice meditation on iPhone. A connected Apple Watch or supported AirPods can supply heart-rate data through Apple Health, with your permission.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>Can I import my existing workouts?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>Yes. Export your workout history as a CSV from Strong, then open Settings → Data → Import from Strong in Somatic. You can also restore a Somatic backup.</p></div>
+      </details>
+      <details class="faq-card">
+        <summary>Which iPhones are supported?</summary>
+        <div class="purchase-faq-answer faq-answer"><p>Somatic requires an iPhone running iOS 26.2 or later. It also adapts to Duo’s expanded display. Apple Intelligence features depend on device, language, and system availability; core tracking and local planning remain available without them.</p></div>
+      </details>
+    </div>
+    <p class="purchase-faq-help"><a href="/somatic/help/">Explore all questions in Help<span aria-hidden="true"> →</span></a></p>
+  </section>
 
   <section class="callout">
     <div class="callout-inner" data-animate>
-      <h4><span class="headline-line">$3.99.</span><span class="headline-line">One purchase. More to come.</span></h4>
+      <h4><span class="headline-line">Find your rhythm.</span><span class="headline-line">14 days on us.</span></h4>
       <p>Strength, cardio, and meditation today. Yoga on the&nbsp;way.</p>
-      <p>The price will increase when yoga arrives. Buy now and that update is included. No&nbsp;subscription.</p>
-      <p>Available on the App Store for $3.99&nbsp;USD.</p>
+      <p>Try the full app, then unlock Somatic for $14.99&nbsp;USD. One purchase. No subscription or automatic&nbsp;charge.</p>
+      <p>Free to download on the App Store. Already bought Somatic? You keep full&nbsp;access.</p>
       <a class="btn-appstore" href="https://apps.apple.com/us/app/somatic-train-with-your-body/id6773419219">
         <img src="src/images/landing/app-store-badge.svg" alt="Download on the App Store" />
       </a>
