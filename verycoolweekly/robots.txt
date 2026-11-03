@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /verycoolweekly/
+Sitemap: https://ruckuslabs.co/verycoolweekly/sitemap.xml

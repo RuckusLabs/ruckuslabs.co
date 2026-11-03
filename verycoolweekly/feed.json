@@ -1,0 +1,85 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Very Cool Weekly",
+  "home_page_url": "https://ruckuslabs.co/verycoolweekly/",
+  "feed_url": "https://ruckuslabs.co/verycoolweekly/feed.json",
+  "items": [
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-eleven/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-eleven/",
+      "title": "Issue Eleven",
+      "content_text": "Issue Eleven: The Nintendo Switch UI; The Terrible UI of Financial Services; Loathing iOS 11's App Switcher. Design and development picks from 2017.",
+      "date_published": "2017-06-30T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-ten/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-ten/",
+      "title": "Issue Ten",
+      "content_text": "Issue Ten: Amazon's New Customer; Behind the Scenes of the Westworld UI; Four Hip Hop Links Every Friday. Design and development picks from 2017.",
+      "date_published": "2017-06-23T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-nine/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-nine/",
+      "title": "Issue Nine",
+      "content_text": "Issue Nine: Designing In Iran; The New Twitter; Designing a Brand in VR. Design and development picks from 2017.",
+      "date_published": "2017-06-16T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-eight/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-eight/",
+      "title": "Issue Eight",
+      "content_text": "Issue Eight: Why you should just say no to Helvetica; Fancy Designer Job Titles; A typeface that caused NZ residents to question their cultural identity. Design…",
+      "date_published": "2017-06-09T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-seven/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-seven/",
+      "title": "Issue Seven",
+      "content_text": "Issue Seven: Brutalist Redesigns; The New Skype; Why Designers Quit Their Agency Jobs to Work at MoMA. Design and development picks from 2017.",
+      "date_published": "2017-06-02T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-six/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-six/",
+      "title": "Issue Six",
+      "content_text": "Issue Six: Fluent Design in Action; One Thing Per Page Design; Little Things I Like to Do with Git. Design and development picks from 2017.",
+      "date_published": "2017-05-26T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-five/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-five/",
+      "title": "Issue Five",
+      "content_text": "Issue Five: Who Are We Designing For?; Slow the Fuck Down; Pepe is Dead. Design and development picks from 2017.",
+      "date_published": "2017-05-19T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-four/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-four/",
+      "title": "Issue Four",
+      "content_text": "Issue Four: Behind Vox Media's Newspaper-Inspired Homepage Redesign; Opulence on Rails; OKCupid's Terrible New App Icon. Design and development picks from 2017.",
+      "date_published": "2017-05-12T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-three/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-three/",
+      "title": "Issue Three",
+      "content_text": "Issue Three: Creating Usability with Motion: The UX in Motion Manifesto; TQ ANimation Gallery; Interviews with Amazing Designers. Design and development picks…",
+      "date_published": "2017-05-05T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-two/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-two/",
+      "title": "Issue Two",
+      "content_text": "Issue Two: Bengt Brummers' Monochromatic Tumblr; Griselda Martí's \"Real Stories\"; Julie Zhuo's \"When Design Feels Like an Uphill Battle\". Design and development…",
+      "date_published": "2017-04-28T12:00:00Z"
+    },
+    {
+      "id": "https://ruckuslabs.co/verycoolweekly/issue-one/",
+      "url": "https://ruckuslabs.co/verycoolweekly/issue-one/",
+      "title": "Issue One",
+      "content_text": "Issue One: Jiwoong Jung’s “Hidden Time” Watch Is a Minimalist Magic Act By the Hour; Unsplash Concept; adidas Climazone. Design and development picks from 2017.",
+      "date_published": "2017-04-21T12:00:00Z"
+    }
+  ]
+}
