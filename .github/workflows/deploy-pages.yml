@@ -1,4 +1,4 @@
-name: Publish website and weekly newsletter
+name: Publish website from Substack
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 5'
+    - cron: '17 * * * *'
       timezone: America/Denver
 
 permissions:
@@ -19,7 +19,44 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  refresh:
+    runs-on: macos-latest
+    outputs:
+      changed: ${{ steps.substack.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: damianmakki/verycoolweekly
+          ref: master
+          path: _vcw
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: _vcw/package-lock.json
+      - run: npm ci
+        working-directory: _vcw
+      - name: Check for published Substack changes
+        id: substack
+        run: npm run sync:substack -- --strict --check-live
+        working-directory: _vcw
+      - name: Diagnose public RSS transport if the refresh fails
+        if: failure()
+        run: |
+          curl --fail --location --max-time 20 --user-agent 'VeryCoolWeekly/1.0 (+https://ruckuslabs.co/verycoolweekly/)' --header 'Accept: application/rss+xml' --output "$RUNNER_TEMP/substack-feed-probe.xml" --write-out 'Public feed HTTP status %{http_code}\n' https://verycoolweekly.substack.com/feed
+      - name: Carry the refreshed public index to the website build
+        uses: actions/upload-artifact@v4
+        with:
+          name: substack-index-${{ github.run_id }}
+          path: _vcw/content/substack/posts.json
+          if-no-files-found: error
+          overwrite: true
+          retention-days: 1
+
   build:
+    needs: refresh
+    if: always() && needs.refresh.result == 'success' && (github.event_name != 'schedule' || needs.refresh.outputs.changed == 'true')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +78,12 @@ jobs:
       - name: Validate the newsletter
         run: npm test
         working-directory: _vcw
-      - name: Build eligible editions
+      - name: Use the refreshed public Substack index
+        uses: actions/download-artifact@v4
+        with:
+          name: substack-index-${{ github.run_id }}
+          path: _vcw/content/substack
+      - name: Build website and preserved archive
         run: npm run build && npm run check
         working-directory: _vcw
       - name: Configure Pages
