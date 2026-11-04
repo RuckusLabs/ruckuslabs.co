@@ -53,6 +53,8 @@ jobs:
           destination: ./_site
       - name: Add the newsletter to the website artifact
         run: |
+          # Jekyll's container writes as root; subsequent runner steps own the artifact.
+          sudo chown -R "$(id -u):$(id -g)" _site
           rm -rf _site/verycoolweekly
           mkdir -p _site/verycoolweekly
           cp -a _vcw/dist/. _site/verycoolweekly/
