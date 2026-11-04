@@ -1,4 +1,4 @@
-name: Publish website and weekly newsletter
+name: Publish website from Substack
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 5'
+    - cron: '17 * * * *'
       timezone: America/Denver
 
 permissions:
@@ -19,7 +19,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  refresh:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.substack.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: damianmakki/verycoolweekly
+          ref: master
+          path: _vcw
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: _vcw/package-lock.json
+      - run: npm ci
+        working-directory: _vcw
+      - name: Check for published Substack changes
+        id: substack
+        run: npm run sync:substack -- --strict --check-live
+        working-directory: _vcw
+
   build:
+    needs: refresh
+    if: always() && (github.event_name != 'schedule' || needs.refresh.outputs.changed == 'true')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +67,10 @@ jobs:
       - name: Validate the newsletter
         run: npm test
         working-directory: _vcw
-      - name: Build eligible editions
+      - name: Refresh published Substack posts
+        run: npm run sync:substack -- --strict
+        working-directory: _vcw
+      - name: Build website and preserved archive
         run: npm run build && npm run check
         working-directory: _vcw
       - name: Configure Pages
