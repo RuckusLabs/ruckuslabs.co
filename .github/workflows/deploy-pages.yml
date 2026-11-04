@@ -43,7 +43,8 @@ jobs:
         working-directory: _vcw
       - name: Diagnose public RSS transport if the refresh fails
         if: failure()
-        run: curl --fail --location --max-time 20 --user-agent 'VeryCoolWeekly/1.0 (+https://ruckuslabs.co/verycoolweekly/)' --header 'Accept: application/rss+xml' --output "$RUNNER_TEMP/substack-feed-probe.xml" --write-out 'Public feed HTTP status %{http_code}\n' https://verycoolweekly.substack.com/feed
+        run: |
+          curl --fail --location --max-time 20 --user-agent 'VeryCoolWeekly/1.0 (+https://ruckuslabs.co/verycoolweekly/)' --header 'Accept: application/rss+xml' --output "$RUNNER_TEMP/substack-feed-probe.xml" --write-out 'Public feed HTTP status %{http_code}\n' https://verycoolweekly.substack.com/feed
       - name: Carry the refreshed public index to the website build
         uses: actions/upload-artifact@v4
         with:
