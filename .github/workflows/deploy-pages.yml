@@ -1,0 +1,80 @@
+name: Publish website and weekly newsletter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 5'
+      timezone: America/Denver
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out the newsletter source
+        uses: actions/checkout@v4
+        with:
+          repository: damianmakki/verycoolweekly
+          ref: master
+          path: _vcw
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: _vcw/package-lock.json
+      - name: Install newsletter dependencies
+        run: npm ci
+        working-directory: _vcw
+      - name: Validate the newsletter
+        run: npm test
+        working-directory: _vcw
+      - name: Build eligible editions
+        run: npm run build && npm run check
+        working-directory: _vcw
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Build the existing website
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Add the newsletter to the website artifact
+        run: |
+          rm -rf _site/verycoolweekly
+          mkdir -p _site/verycoolweekly
+          cp -a _vcw/dist/. _site/verycoolweekly/
+          test ! -e _site/_vcw
+          test ! -e _site/verycoolweekly/content
+          test ! -e _site/verycoolweekly/exports
+          test ! -e _site/verycoolweekly/scripts
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish the website
+        id: deployment
+        uses: actions/deploy-pages@v4
