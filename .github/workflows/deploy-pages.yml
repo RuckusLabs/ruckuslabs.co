@@ -20,8 +20,7 @@ concurrency:
 
 jobs:
   refresh:
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     outputs:
       changed: ${{ steps.substack.outputs.changed }}
     steps:
@@ -42,10 +41,18 @@ jobs:
         id: substack
         run: npm run sync:substack -- --strict --check-live
         working-directory: _vcw
+      - name: Carry the refreshed public index to the website build
+        uses: actions/upload-artifact@v4
+        with:
+          name: substack-index-${{ github.run_id }}
+          path: _vcw/content/substack/posts.json
+          if-no-files-found: error
+          overwrite: true
+          retention-days: 1
 
   build:
     needs: refresh
-    if: always() && (github.event_name != 'schedule' || needs.refresh.outputs.changed == 'true')
+    if: always() && needs.refresh.result == 'success' && (github.event_name != 'schedule' || needs.refresh.outputs.changed == 'true')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -67,9 +74,11 @@ jobs:
       - name: Validate the newsletter
         run: npm test
         working-directory: _vcw
-      - name: Refresh published Substack posts
-        run: npm run sync:substack -- --strict
-        working-directory: _vcw
+      - name: Use the refreshed public Substack index
+        uses: actions/download-artifact@v4
+        with:
+          name: substack-index-${{ github.run_id }}
+          path: _vcw/content/substack
       - name: Build website and preserved archive
         run: npm run build && npm run check
         working-directory: _vcw
