@@ -1,4 +1,5 @@
-name: Publish website and weekly newsletter
+name: Publish website from Substack
+run-name: Publish website · newsletter ${{ inputs.newsletter_ref || 'master' }}
 
 on:
   push:
@@ -6,9 +7,12 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: '0 9 * * 5'
-      timezone: America/Denver
+    inputs:
+      newsletter_ref:
+        description: Validated newsletter commit from the Mac feed refresh
+        required: false
+        default: master
+        type: string
 
 permissions:
   contents: read
@@ -20,14 +24,14 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Check out the newsletter source
         uses: actions/checkout@v4
         with:
           repository: damianmakki/verycoolweekly
-          ref: master
+          ref: ${{ inputs.newsletter_ref || 'master' }}
           path: _vcw
           persist-credentials: false
       - uses: actions/setup-node@v4
@@ -41,7 +45,7 @@ jobs:
       - name: Validate the newsletter
         run: npm test
         working-directory: _vcw
-      - name: Build eligible editions
+      - name: Build website and preserved archive
         run: npm run build && npm run check
         working-directory: _vcw
       - name: Configure Pages
@@ -69,7 +73,7 @@ jobs:
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
